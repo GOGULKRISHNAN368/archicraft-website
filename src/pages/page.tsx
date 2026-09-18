@@ -115,10 +115,10 @@ export default function HomePage() {
 
         {/* Content Container */}
         <div className="relative z-10 w-full max-w-[1450px] mx-auto px-5 sm:px-8 lg:px-[60px] py-[45px] sm:py-[55px] lg:py-[70px]">
-          <div className="flex flex-col md:flex-row md:items-start gap-12 md:gap-8 lg:gap-16">
+          <div className="flex flex-col md:flex-row md:items-start gap-12 md:gap-8 lg:gap-10 xl:gap-16">
             
             {/* Left Column */}
-            <div className="w-full md:w-[35%] lg:w-[33%] flex flex-col">
+            <div className="w-full md:w-[42%] lg:w-[45%] flex flex-col md:pl-[6%] lg:pl-[10%] xl:pl-[14%]">
               
               <div className="flex items-center gap-3 mb-4 lg:mb-6">
                 <div className="w-8 sm:w-10 lg:w-12 h-px bg-[#C9A45C]"></div>
@@ -143,7 +143,7 @@ export default function HomePage() {
             </div>
 
             {/* Right Column - FAQ Accordion */}
-            <div className="w-full md:w-[65%] lg:w-[67%]">
+            <div className="w-full md:w-[58%] lg:w-[55%] pr-0 lg:pr-[4%] xl:pr-[6%]">
               <FaqAccordion items={homeFaqs} />
             </div>
             
