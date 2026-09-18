@@ -4,6 +4,7 @@ export type Service = {
   seoTitle: string;
   metaDescription: string;
   hero: string;
+  shortDescription: string;
   overview: string;
   benefits: string[];
   processNote: string;
@@ -18,6 +19,7 @@ export const services: Service[] = [
     seoTitle: "Residential Interior Design | Archicraft Interiors",
     metaDescription: "Bespoke residential interior design including modular kitchens, wardrobes, pooja rooms, bedroom designs, and living room designs.",
     hero: "Homes designed around the way your family actually lives",
+    shortDescription: "Warm, functional spaces designed around everyday living.",
     overview: "Every residential project starts with a conversation about how you use your home day to day. We shape a full-home interior that balances elegance, functionality, and timeless appeal.",
     benefits: [
       "Modular Kitchen - Smart, functional, and premium layouts",
@@ -40,6 +42,7 @@ export const services: Service[] = [
     seoTitle: "Commercial Interior Design | Archicraft Interiors",
     metaDescription: "Premium commercial interior design for jewellery showrooms, textile showrooms, salons, and cafés.",
     hero: "Spaces designed for business success",
+    shortDescription: "Distinctive spaces designed for memorable customer experiences.",
     overview: "We design commercial spaces that not only look stunning but also improve customer experience and operational efficiency.",
     benefits: [
       "Jewellery Showroom - Elegant and secure displays",
@@ -59,6 +62,7 @@ export const services: Service[] = [
     seoTitle: "Corporate & Office Interior Design | Archicraft Interiors",
     metaDescription: "Office interior design including executive cabins, workstations, conference rooms, and smart storage.",
     hero: "Workspaces designed around productivity",
+    shortDescription: "Modern workplaces shaped around people and productivity.",
     overview: "Workspaces that create efficiency while maintaining modern design aesthetics, tailored for your team's workflow.",
     benefits: [
       "Executive Cabin - Premium and private executive spaces",
@@ -79,6 +83,7 @@ export const services: Service[] = [
     seoTitle: "Industrial Interior Design | Archicraft Interiors",
     metaDescription: "Functional and robust industrial interior design solutions tailored for operational efficiency.",
     hero: "Robust and functional design for industries",
+    shortDescription: "Durable, efficient spaces built for demanding environments.",
     overview: "Industrial spaces require a balance of durability, safety, and functional workflow. We design interiors that support heavy-duty operations while maintaining a professional aesthetic.",
     benefits: [
       "Optimized operational workflows",
@@ -98,6 +103,7 @@ export const services: Service[] = [
     seoTitle: "False Ceiling Solutions | Archicraft Interiors",
     metaDescription: "Professional false ceiling installations including grid, gypsum, and custom lighting integration.",
     hero: "Enhancing spaces through design, from above",
+    shortDescription: "Architectural ceilings that transform light, proportion, and mood.",
     overview: "Thoughtfully crafted ceiling and lighting solutions that add depth, improve aesthetics, and elevate the overall ambience.",
     benefits: [
       "Grid False Ceiling - Functional suspended ceilings ideal for commercial spaces",
@@ -117,6 +123,7 @@ export const services: Service[] = [
     seoTitle: "Aluminium & Glass Partitions | Archicraft Interiors",
     metaDescription: "Premium aluminium partitions, glass partitions, shower cubicles, and toilet partitions.",
     hero: "Modern, transparent, and durable partitions",
+    shortDescription: "Clean, precise partitions and architectural glass solutions.",
     overview: "High-quality aluminium and glass systems that divide spaces without compromising on light or openness.",
     benefits: [
       "Aluminium Partition - Sleek and durable spatial dividers",

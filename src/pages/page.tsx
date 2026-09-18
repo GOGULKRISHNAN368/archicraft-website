@@ -40,9 +40,11 @@ export default function HomePage() {
           title="One studio, every space that matters"
           subtitle="From the kitchen where the day begins to the pooja room where it's grounded â€” we design every corner of your home and workplace with the same care."
         />
-        <div className="mt-10 sm:mt-12 flex gap-4 overflow-x-auto snap-x snap-mandatory pb-2 sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:overflow-visible">
+        <div className="mt-10 sm:mt-12 flex gap-5 overflow-x-auto snap-x snap-mandatory pb-4 sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:overflow-visible hide-scrollbar">
           {featuredServices.map((s) => (
-            <ServiceCard key={s.slug} service={s} />
+            <div key={s.slug} className="w-[85vw] sm:w-auto flex-shrink-0 snap-start flex">
+              <ServiceCard service={s} />
+            </div>
           ))}
         </div>
         <div className="text-center mt-8">
