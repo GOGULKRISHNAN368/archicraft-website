@@ -1,24 +1,45 @@
 import { Link } from "react-router-dom";
-;
 import type { Material } from "@/data/materials";
 import { materialImages, heroFallbackImage } from "@/data/images";
 
-export default function MaterialCard({ material }: { material: Material }) {
+export default function MaterialCard({ material, index }: { material: Material, index?: number }) {
   return (
     <Link
       to={`/materials/${material.slug}`}
-      className="flex-shrink-0 w-40 sm:w-full snap-start bg-white rounded-xl border border-softgrey p-4 sm:p-5 hover:shadow-lg transition-shadow"
+      className="group flex flex-col items-start block"
     >
-      <div className="h-20 sm:h-24 bg-beige rounded-lg mb-3 relative overflow-hidden">
+      <div className="w-full aspect-[4/3] rounded-[4px] overflow-hidden mb-5 sm:mb-6 bg-[#E9E1D3]">
         <img
           src={materialImages[material.slug] || heroFallbackImage}
-          alt={`${material.name} interior finish used by Archicraft Interiors, Coimbatore`}
-          sizes="(min-width: 640px) 30vw, 160px"
-          className="object-cover"
+          alt={`${material.name} interior finish`}
+          className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.02]"
         />
       </div>
-      <p className="font-display font-semibold text-base sm:text-lg text-teal-900">{material.name}</p>
-      <p className="text-xs sm:text-sm text-teal-900/60 mt-1 line-clamp-2">{material.description}</p>
+      
+      <div className="flex items-baseline gap-3 mb-2 w-full">
+        {index !== undefined && (
+          <span className="text-[#C8A45D] text-xs font-semibold tracking-widest shrink-0">
+            {String(index).padStart(2, '0')}
+          </span>
+        )}
+        <h3 className="font-display text-[#073F3A] text-xl sm:text-2xl font-medium">
+          {material.name}
+        </h3>
+      </div>
+      
+      <p className="text-[#6F8580] text-[14px] leading-relaxed mb-4 max-w-sm">
+        {material.description}
+      </p>
+      
+      <div className="mt-auto flex items-center text-[#073F3A] font-medium text-sm transition-colors group-hover:text-[#C8A45D]">
+        <span className="relative">
+          Explore
+          <span className="absolute left-0 -bottom-1 w-0 group-hover:w-full h-[1px] bg-[#C8A45D] transition-all duration-300"></span>
+        </span>
+        <span className="ml-2 transform group-hover:translate-x-1 transition-transform duration-300">
+          →
+        </span>
+      </div>
     </Link>
   );
 }
