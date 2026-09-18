@@ -114,17 +114,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <RevealOnScroll>
-        <section className="bg-teal-900 py-16 sm:py-24 text-center px-4">
-          <h2 className="font-display font-semibold text-3xl sm:text-4xl text-warmwhite">
-            Let&rsquo;s create something extraordinary, together
-          </h2>
-          <p className="text-warmwhite/70 mt-3">Designing spaces you&rsquo;ll love for years to come.</p>
-          <div className="mt-8">
-            <Button to="/contact">Book a Consultation</Button>
-          </div>
-        </section>
-      </RevealOnScroll>
     </>
   );
 }
