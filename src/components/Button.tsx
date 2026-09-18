@@ -2,13 +2,13 @@ import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
 
 type Props = {
-  href: string;
+  to: string;
   children: React.ReactNode;
   variant?: "primary" | "secondary" | "dark";
   className?: string;
 };
 
-export default function Button({ href, children, variant = "primary", className }: Props) {
+export default function Button({ to, children, variant = "primary", className }: Props) {
   const base =
     "inline-flex items-center justify-center font-button font-semibold text-[13px] tracking-wide uppercase px-6 py-3.5 sm:px-7 sm:py-4 rounded transition-all duration-200 ease-out hover:-translate-y-0.5";
 
@@ -19,7 +19,7 @@ export default function Button({ href, children, variant = "primary", className 
   };
 
   return (
-    <Link href={href} className={cn(base, variants[variant], className)}>
+    <Link to={to} className={cn(base, variants[variant], className)}>
       {children}
     </Link>
   );
