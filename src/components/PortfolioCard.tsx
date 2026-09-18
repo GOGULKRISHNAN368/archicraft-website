@@ -14,9 +14,9 @@ export default function PortfolioCard({ project }: { project: Project }) {
           src={portfolioImages[project.slug] || heroFallbackImage}
           alt={`${project.name} â€” residential interior design project, ${project.location}`}
           sizes="(min-width: 640px) 33vw, 80vw"
-          className="object-cover group-hover:scale-105 transition-transform duration-500"
+          className="w-full h-full absolute inset-0 object-cover group-hover:scale-105 transition-transform duration-500"
         />
-        <div className="absolute inset-0 bg-teal-900/0 group-hover:bg-teal-900/20 transition-colors" />
+        <div className="absolute inset-0 bg-teal-900/0 group-hover:bg-teal-900/20 transition-colors pointer-events-none" />
       </div>
       <p className="font-display font-semibold text-lg text-teal-900 mt-3 group-hover:text-teal transition-colors relative inline-block">
         {project.name}
