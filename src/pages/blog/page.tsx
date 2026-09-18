@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { Link } from "react-router-dom";
 ;
 import SectionHeading from "@/components/SectionHeading";
@@ -13,12 +12,11 @@ export default function BlogPage() {
       <SectionHeading eyebrow="Ideas" title="Design ideas, material guides, and project stories" align="left" />
       <div className="mt-10 sm:mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {blogPosts.map((post) => (
-          <Link key={post.slug} href={`/blog/${post.slug}`} className="group">
+          <Link key={post.slug} to={`/blog/${post.slug}`} className="group">
             <div className="aspect-[4/3] bg-softgrey rounded-xl relative overflow-hidden">
               <img
                 src={blogImages[post.slug] || heroFallbackImage}
                 alt={post.title}
-                fill
                 sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
               />

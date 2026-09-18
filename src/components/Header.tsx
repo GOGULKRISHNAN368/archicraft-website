@@ -20,7 +20,7 @@ export default function Header() {
       </div>
 
       <div className="flex items-center justify-between px-4 sm:px-6 lg:px-10 h-16 md:h-[72px]">
-        <Link href="/" className="flex items-center" aria-label="Archicraft Interiors â€” Home">
+        <Link to="/" className="flex items-center" aria-label="Archicraft Interiors â€” Home">
           <img
             src="/images/archicraft-logo.png"
             alt="Archicraft Interiors"
@@ -40,7 +40,7 @@ export default function Header() {
               onMouseEnter={() => item.children && setServicesOpen(true)}
               onMouseLeave={() => item.children && setServicesOpen(false)}
             >
-              <Link href={item.href} className="font-sans text-sm text-teal-900 hover:text-teal transition-colors">
+              <Link to={item.href} className="font-sans text-sm text-teal-900 hover:text-teal transition-colors">
                 {item.label}
               </Link>
               {item.children && servicesOpen && (
@@ -49,7 +49,7 @@ export default function Header() {
                     {item.children.map((child) => (
                       <Link
                         key={child.href}
-                        href={child.href}
+                        to={child.href}
                         className="block px-3 py-2 text-sm text-teal-900 hover:text-teal hover:bg-beige rounded"
                       >
                         {child.label}
@@ -64,7 +64,7 @@ export default function Header() {
 
         <div className="flex items-center gap-4">
           <Link
-            href="/contact"
+            to="/contact"
             className="hidden md:inline-flex font-button font-semibold text-xs tracking-wide uppercase bg-gold text-teal-900 px-5 py-3 rounded hover:bg-gold-800 hover:text-warmwhite transition-colors"
           >
             Book Consultation
@@ -96,7 +96,7 @@ export default function Header() {
           {primaryNav.map((item) => (
             <div key={item.label} className="border-b border-softgrey py-3">
               <Link
-                href={item.href}
+                to={item.href}
                 onClick={() => setMenuOpen(false)}
                 className="font-display text-lg text-teal-900"
               >
@@ -107,7 +107,7 @@ export default function Header() {
                   {item.children.map((child) => (
                     <Link
                       key={child.href}
-                      href={child.href}
+                      to={child.href}
                       onClick={() => setMenuOpen(false)}
                       className="text-sm text-teal-900/70"
                     >
@@ -119,7 +119,7 @@ export default function Header() {
             </div>
           ))}
           <Link
-            href="/contact"
+            to="/contact"
             onClick={() => setMenuOpen(false)}
             className="mt-4 text-center font-button font-semibold text-sm uppercase bg-gold text-teal-900 px-5 py-4 rounded"
           >

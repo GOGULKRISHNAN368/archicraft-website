@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { Navigate } from "react-router-dom";
 import Button from "@/components/Button";
 import { materials, getMaterialBySlug } from "@/data/materials";
@@ -8,7 +7,7 @@ export function generateStaticParams() {
 }
 
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const material = getMaterialBySlug(slug);
+  const material = (slug!);
   if (!material) return {};
   return { title: material.seoTitle, description: material.metaDescription };
 }
@@ -16,7 +15,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
 import { useParams } from "react-router-dom";
 export default function MaterialPage() {
   const { slug } = useParams();
-  const material = getMaterialBySlug(slug);
+  const material = (slug!);
   if (!material) return <Navigate to="/not-found" replace />;
 
   const rows = [
@@ -38,7 +37,7 @@ export default function MaterialPage() {
         ))}
       </div>
       <div className="mt-10">
-        <Button href="/contact">Book a Consultation</Button>
+        <Button to="/contact">Book a Consultation</Button>
       </div>
     </section>
   );

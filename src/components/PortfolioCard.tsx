@@ -6,14 +6,13 @@ import { portfolioImages, heroFallbackImage } from "@/data/images";
 export default function PortfolioCard({ project }: { project: Project }) {
   return (
     <Link
-      href={`/portfolio/${project.slug}`}
+      to={`/portfolio/${project.slug}`}
       className="group flex-shrink-0 w-[80vw] sm:w-full snap-start block"
     >
       <div className="aspect-[4/3] bg-softgrey rounded-xl overflow-hidden relative">
         <img
           src={portfolioImages[project.slug] || heroFallbackImage}
           alt={`${project.name} â€” residential interior design project, ${project.location}`}
-          fill
           sizes="(min-width: 640px) 33vw, 80vw"
           className="object-cover group-hover:scale-105 transition-transform duration-500"
         />

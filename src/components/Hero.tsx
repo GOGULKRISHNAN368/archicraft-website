@@ -51,10 +51,10 @@ export default function Hero({
           </h1>
           <p className="mt-4 sm:mt-6 text-warmwhite/85 text-base sm:text-lg max-w-xl">{subtitle}</p>
           <div className="mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4">
-            <Button href={primaryHref}>{primaryCta}</Button>
+            <Button to={primaryHref}>{primaryCta}</Button>
             {secondaryCta && secondaryHref && (
               <Button
-                href={secondaryHref}
+                to={secondaryHref}
                 variant="secondary"
                 className="!border-warmwhite !text-warmwhite hover:!bg-warmwhite hover:!text-teal-900"
               >

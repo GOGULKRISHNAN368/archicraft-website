@@ -46,7 +46,7 @@ export default function HomePage() {
           ))}
         </div>
         <div className="text-center mt-8">
-          <Button href="/services" variant="secondary">View All Services</Button>
+          <Button to="/services" variant="secondary">View All Services</Button>
         </div>
       </section>
 
@@ -67,7 +67,7 @@ export default function HomePage() {
           ))}
         </div>
         <div className="text-center mt-8">
-          <Button href="/portfolio" variant="secondary">Explore Full Portfolio</Button>
+          <Button to="/portfolio" variant="secondary">Explore Full Portfolio</Button>
         </div>
       </section>
 
@@ -82,7 +82,7 @@ export default function HomePage() {
             <ProcessTimeline />
           </div>
           <div className="text-center mt-8">
-            <Button href="/design-process" variant="secondary" className="!border-warmwhite !text-warmwhite hover:!bg-warmwhite hover:!text-teal">
+            <Button to="/design-process" variant="secondary" className="!border-warmwhite !text-warmwhite hover:!bg-warmwhite hover:!text-teal">
               See the Full Process
             </Button>
           </div>
@@ -100,7 +100,7 @@ export default function HomePage() {
           ))}
         </div>
         <div className="text-center mt-8">
-          <Button href="/materials" variant="secondary">Explore Our Materials</Button>
+          <Button to="/materials" variant="secondary">Explore Our Materials</Button>
         </div>
       </section>
 
@@ -134,7 +134,7 @@ export default function HomePage() {
           </h2>
           <p className="text-warmwhite/70 mt-3">Designing spaces you&rsquo;ll love for years to come.</p>
           <div className="mt-8">
-            <Button href="/contact">Book a Consultation</Button>
+            <Button to="/contact">Book a Consultation</Button>
           </div>
         </section>
       </RevealOnScroll>

@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { Navigate } from "react-router-dom";
 ;
 import Button from "@/components/Button";
@@ -11,7 +10,7 @@ export function generateStaticParams() {
 }
 
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const project = getProjectBySlug(slug);
+  const project = (slug!);
   if (!project) return {};
   return { title: project.seoTitle, description: project.metaDescription };
 }
@@ -19,7 +18,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
 import { useParams } from "react-router-dom";
 export default function ProjectPage() {
   const { slug } = useParams();
-  const project = getProjectBySlug(slug);
+  const project = (slug!);
   if (!project) return <Navigate to="/not-found" replace />;
 
   const related = projects.filter((p) => p.slug !== project.slug).slice(0, 3);
@@ -31,7 +30,6 @@ export default function ProjectPage() {
         <img
           src={portfolioImages[project.slug] || heroFallbackImage}
           alt={`${project.name} residential interior design project, ${project.location}`}
-          fill
          
           sizes="100vw"
           className="object-cover opacity-70"
@@ -63,7 +61,6 @@ export default function ProjectPage() {
                 <img
                   src={src}
                   alt={`${project.name} interior design detail ${i + 1}, ${project.location} — Archicraft Interiors`}
-                  fill
                   sizes="(min-width: 1024px) 33vw, 45vw"
                   className="object-cover"
                 />
@@ -75,7 +72,7 @@ export default function ProjectPage() {
         <aside className="bg-beige rounded-xl p-6 h-fit">
           <p className="font-button text-xs uppercase tracking-wide text-teal-900/60 mb-2">Materials Used</p>
           <p className="text-sm text-teal-900/80">{project.materialsUsed}</p>
-          <Button href="/contact" className="w-full mt-6 !inline-flex justify-center">Book a Consultation</Button>
+          <Button to="/contact" className="w-full mt-6 !inline-flex justify-center">Book a Consultation</Button>
         </aside>
       </section>
 

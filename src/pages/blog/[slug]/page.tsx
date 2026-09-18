@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { Navigate } from "react-router-dom";
 import Button from "@/components/Button";
 import { blogPosts, getPostBySlug } from "@/data/blog";
@@ -8,7 +7,7 @@ export function generateStaticParams() {
 }
 
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const post = getPostBySlug(slug);
+  const post = (slug!);
   if (!post) return {};
   return { title: post.seoTitle, description: post.metaDescription };
 }
@@ -16,7 +15,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
 import { useParams } from "react-router-dom";
 export default function BlogPostPage() {
   const { slug } = useParams();
-  const post = getPostBySlug(slug);
+  const post = (slug!);
   if (!post) return <Navigate to="/not-found" replace />;
 
   return (
@@ -29,7 +28,7 @@ export default function BlogPostPage() {
         ))}
       </div>
       <div className="mt-10">
-        <Button href="/contact">Book a Consultation</Button>
+        <Button to="/contact">Book a Consultation</Button>
       </div>
     </article>
   );

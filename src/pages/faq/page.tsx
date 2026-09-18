@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import SectionHeading from "@/components/SectionHeading";
 import FaqAccordion from "@/components/FaqAccordion";
 import Button from "@/components/Button";
@@ -19,7 +18,7 @@ export default function FaqPage() {
         ))}
       </div>
       <div className="mt-12">
-        <Button href="/contact">Still have a question? Book a Consultation</Button>
+        <Button to="/contact">Still have a question? Book a Consultation</Button>
       </div>
     </section>
   );

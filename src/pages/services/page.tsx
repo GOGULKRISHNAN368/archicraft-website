@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import SectionHeading from "@/components/SectionHeading";
 import ServiceCard from "@/components/ServiceCard";
 import { services } from "@/data/services";

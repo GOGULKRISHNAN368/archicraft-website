@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import SectionHeading from "@/components/SectionHeading";
 import MaterialCard from "@/components/MaterialCard";
 import Button from "@/components/Button";
@@ -19,7 +18,7 @@ export default function MaterialsPage() {
         ))}
       </div>
       <div className="text-center mt-10">
-        <Button href="/contact">Book a Consultation</Button>
+        <Button to="/contact">Book a Consultation</Button>
       </div>
     </section>
   );

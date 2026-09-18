@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import SectionHeading from "@/components/SectionHeading";
 import ProcessTimeline from "@/components/ProcessTimeline";
 import Button from "@/components/Button";
@@ -27,7 +26,7 @@ export default function DesignProcessPage() {
           Our Promise: Quality, Transparency, Timely Delivery. Your satisfaction is our commitment.
         </p>
         <div className="mt-8">
-          <Button href="/contact">Book a Consultation</Button>
+          <Button to="/contact">Book a Consultation</Button>
         </div>
       </section>
     </>

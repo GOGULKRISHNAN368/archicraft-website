@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import SectionHeading from "@/components/SectionHeading";
 import ConsultationForm from "@/components/ConsultationForm";
 import { site } from "@/data/site";

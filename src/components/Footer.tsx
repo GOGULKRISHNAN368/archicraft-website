@@ -57,7 +57,7 @@ export default function Footer() {
           <p className="font-button text-xs uppercase tracking-wide text-gold mb-4">Services</p>
           <ul className="flex flex-col gap-2 text-sm text-warmwhite/80">
             {footerServiceLinks.map((l) => (
-              <li key={l.href}><Link href={l.href} className="hover:text-warmwhite">{l.label}</Link></li>
+              <li key={l.href}><Link to={l.href} className="hover:text-warmwhite">{l.label}</Link></li>
             ))}
           </ul>
         </div>
@@ -66,7 +66,7 @@ export default function Footer() {
           <p className="font-button text-xs uppercase tracking-wide text-gold mb-4">Company</p>
           <ul className="flex flex-col gap-2 text-sm text-warmwhite/80">
             {footerCompanyLinks.map((l) => (
-              <li key={l.href}><Link href={l.href} className="hover:text-warmwhite">{l.label}</Link></li>
+              <li key={l.href}><Link to={l.href} className="hover:text-warmwhite">{l.label}</Link></li>
             ))}
           </ul>
         </div>
@@ -78,7 +78,7 @@ export default function Footer() {
             <li><a href={`mailto:${site.email}`} className="hover:text-warmwhite">{site.email}</a></li>
             <li>{site.city}, Tamil Nadu</li>
             <li>
-              <Link href="/contact" className="inline-block mt-2 font-button text-xs uppercase bg-gold text-teal-900 px-4 py-2.5 rounded">
+              <Link to="/contact" className="inline-block mt-2 font-button text-xs uppercase bg-gold text-teal-900 px-4 py-2.5 rounded">
                 Book a Consultation
               </Link>
             </li>
@@ -89,8 +89,8 @@ export default function Footer() {
       <div className="border-t border-warmwhite/10 px-4 sm:px-6 lg:px-10 py-5 flex flex-col sm:flex-row gap-2 justify-between text-xs text-warmwhite/50 max-w-content mx-auto">
         <p>Â© {new Date().getFullYear()} Archicraft Interiors. All rights reserved.</p>
         <div className="flex gap-4">
-          <Link href="/privacy-policy" className="hover:text-warmwhite">Privacy Policy</Link>
-          <Link href="/terms-conditions" className="hover:text-warmwhite">Terms & Conditions</Link>
+          <Link to="/privacy-policy" className="hover:text-warmwhite">Privacy Policy</Link>
+          <Link to="/terms-conditions" className="hover:text-warmwhite">Terms & Conditions</Link>
         </div>
       </div>
     </footer>

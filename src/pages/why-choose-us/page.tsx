@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import SectionHeading from "@/components/SectionHeading";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import Button from "@/components/Button";
@@ -16,7 +15,7 @@ export default function WhyChooseUsPage() {
         <WhyChooseUs />
       </div>
       <div className="mt-12">
-        <Button href="/contact">Book a Consultation</Button>
+        <Button to="/contact">Book a Consultation</Button>
       </div>
     </section>
   );

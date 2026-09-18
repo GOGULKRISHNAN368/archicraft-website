@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import SectionHeading from "@/components/SectionHeading";
 import PortfolioCard from "@/components/PortfolioCard";
 import { projects } from "@/data/portfolio";

@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 ;
 import Hero from "@/components/Hero";
 import SectionHeading from "@/components/SectionHeading";
@@ -52,7 +51,6 @@ export default function AboutPage() {
             <img
               src="/images/team/udhayakumar-founder.jpg"
               alt="Udhayakumar K, Founder and Business Owner"
-              fill
               sizes="(min-width: 1024px) 480px, 90vw"
               className="object-cover"
             />
@@ -93,7 +91,7 @@ export default function AboutPage() {
             &ldquo;Creating interiors that stand the test of time â€” designed with passion, built with precision.&rdquo;
           </p>
           <div className="mt-8">
-            <Button href="/contact">Book a Consultation</Button>
+            <Button to="/contact">Book a Consultation</Button>
           </div>
         </div>
       </section>
