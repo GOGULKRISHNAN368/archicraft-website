@@ -105,13 +105,59 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-beige py-16 sm:py-24">
-        <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-10 max-w-3xl">
-          <SectionHeading title="Questions, answered" align="left" />
-          <div className="mt-8">
-            <FaqAccordion items={homeFaqs} />
+      <section className="relative w-full min-h-[800px] bg-[#F3EEE5] overflow-hidden flex flex-col justify-center">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 z-0 bg-[url('/images/faq-bg.png')] bg-cover bg-no-repeat"
+          style={{ backgroundPosition: "center center" }}
+          aria-hidden="true"
+        ></div>
+
+        {/* Content Container */}
+        <div className="relative z-10 w-full max-w-[1450px] mx-auto px-5 sm:px-8 lg:px-[60px] py-[50px] sm:py-[60px] lg:py-[80px]">
+          <div className="flex flex-col md:flex-row md:items-start gap-12 md:gap-8 lg:gap-16">
+            
+            {/* Left Column */}
+            <div className="w-full md:w-[35%] lg:w-[33%] flex flex-col pt-2 lg:pt-4">
+              
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-8 sm:w-12 h-px bg-[#C9A45C]"></div>
+                <span className="text-[#C9A45C] text-[12px] sm:text-[13px] font-medium tracking-[3px] uppercase">
+                  Frequently Asked Questions
+                </span>
+              </div>
+              
+              <h2 className="font-display text-[#073F3A] text-[42px] sm:text-[48px] lg:text-[66px] leading-[1.0] font-semibold mb-6 max-w-[320px] md:max-w-none">
+                Questions,<br/>answered
+              </h2>
+              
+              <p className="text-[#6F7C78] text-[16px] lg:text-[19px] leading-[1.6] max-w-[320px] mb-12">
+                Everything you need to know before we begin designing your space.
+              </p>
+              
+              <div className="w-16 h-px bg-[#C9A45C] mb-8"></div>
+              
+              <div className="text-[#6F7C78]/70 text-[10px] sm:text-[11px] font-medium tracking-[3px] uppercase leading-[1.8] mb-8 md:mb-0">
+                Spaces for<br/>a better<br/>tomorrow
+              </div>
+            </div>
+
+            {/* Right Column - FAQ Accordion */}
+            <div className="w-full md:w-[65%] lg:w-[67%]">
+              <FaqAccordion items={homeFaqs} />
+            </div>
+            
           </div>
         </div>
+
+        {/* Mobile Background Override (Injecting small style for specific mobile background shift if needed) */}
+        <style dangerouslySetInnerHTML={{__html: `
+          @media (max-width: 767px) {
+            .bg-\\[url\\(\\'\\/images\\/faq-bg\\.png\\'\\)\\] {
+              background-position: 35% center !important;
+            }
+          }
+        `}} />
       </section>
 
     </>

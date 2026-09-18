@@ -1,23 +1,23 @@
 export const homeFaqs = [
   {
     q: "How long does a full-home interior project typically take?",
-    a: "Timelines depend on scope, but we agree a clear schedule with you at the planning stage and keep you updated at every milestone — no surprises.",
+    a: "A full-home interior project typically takes between 8 to 16 weeks, depending on the size of the space, design complexity, material availability, and custom requirements. We provide a detailed timeline after the initial consultation.",
   },
   {
     q: "Do you handle everything, or just design?",
-    a: "We're an end-to-end studio — from the first concept to material selection, execution, and final handover, one team stays accountable throughout.",
+    a: "We handle the complete interior process, from design and material selection through execution and final finishing, so you have one coordinated team throughout the project.",
   },
   {
     q: "Can I see the materials before committing?",
-    a: "Yes. Our material selection process includes physical samples and swatches so you know exactly what's going into your home.",
+    a: "Yes. We help you review and compare finishes, laminates, hardware, and other material options before final selections are made.",
   },
   {
     q: "Do you work on both apartments and independent villas?",
-    a: "Yes — residential, apartment, and villa interiors are all part of our core work, along with office and commercial spaces.",
+    a: "Yes. We work on apartments, independent villas, and other residential spaces, tailoring the design and execution to the property and your requirements.",
   },
   {
     q: "Where are you currently based, and do you take projects outside Coimbatore?",
-    a: "We're based in Coimbatore and have completed projects across Erode, Salem, and Bengaluru — reach out and we'll confirm feasibility for your location.",
+    a: "We are based in Coimbatore, Tamil Nadu, and consider projects in nearby cities and locations depending on the scope and requirements.",
   },
 ];
 
