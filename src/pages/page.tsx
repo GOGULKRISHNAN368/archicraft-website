@@ -95,7 +95,7 @@ export default function HomePage() {
         <TrustedBrands />
       </section>
 
-      <section className="max-w-content mx-auto px-4 sm:px-6 lg:px-10 py-16 sm:py-24">
+      <section className="max-w-content mx-auto px-4 sm:px-6 lg:px-10 pt-10 pb-16 sm:pt-16 sm:pb-24">
         <SectionHeading title="What clients say about working with us" />
         <div className="mt-10 sm:mt-12">
           <Testimonials />

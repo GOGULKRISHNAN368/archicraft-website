@@ -4,7 +4,7 @@ import { materialImages } from "@/data/images";
 
 export default function HomeMaterials() {
   return (
-    <section className="relative w-full bg-[#F8F5EF] py-12 sm:py-16 overflow-hidden font-sans">
+    <section className="relative w-full bg-[#F8F5EF] pt-12 sm:pt-16 overflow-hidden font-sans">
       {/* Decorative side text (Hidden on mobile) */}
       <div className="hidden lg:block absolute left-4 top-24 text-[#55716C]/40 text-[10px] tracking-[0.25em] uppercase rotate-[-90deg] origin-left">
         Spaces that feel like you
@@ -14,7 +14,7 @@ export default function HomeMaterials() {
       <div className="hidden lg:block absolute left-8 top-0 bottom-0 w-px bg-[#B9965A]/20"></div>
       <div className="hidden lg:block absolute right-8 top-0 bottom-0 w-px bg-[#B9965A]/20"></div>
 
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 relative z-10">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 relative z-10 pb-12 sm:pb-16">
         
         {/* Header Area */}
         <div className="flex flex-col items-center text-center max-w-[700px] mx-auto mb-10 sm:mb-12">
@@ -94,16 +94,6 @@ export default function HomeMaterials() {
               →
             </span>
           </Link>
-        </div>
-
-        {/* Bottom Decorative Elements */}
-        <div className="hidden md:flex justify-between mt-14 pt-6 border-t border-[#B9965A]/20">
-          <div className="text-[#71807B] text-[9px] font-medium tracking-[0.2em] uppercase">
-            Thoughtful materials.<br/>Beautiful spaces.
-          </div>
-          <div className="text-[#71807B] text-[9px] font-medium tracking-[0.2em] uppercase text-right">
-            Built<br/>for a brighter<br/>tomorrow
-          </div>
         </div>
 
       </div>
