@@ -15,14 +15,14 @@ export default function MaterialsPage() {
         <div className="absolute inset-0 z-0 bg-white/70 sm:hidden"></div>
 
         <div className="relative z-10 max-w-[1400px] w-full mx-auto px-6 sm:px-10 lg:px-[70px] pt-8">
-          <div className="w-full sm:w-[60%] lg:w-[45%]">
-            <span className="block text-[#C8A45D] text-xs sm:text-[11px] font-medium tracking-[0.25em] uppercase mb-4 sm:mb-6">
+          <div className="w-full sm:w-[65%] lg:w-[50%] md:pl-12 lg:pl-[100px]">
+            <span className="block text-[#C8A45D] text-xs sm:text-[12px] font-medium tracking-[0.25em] uppercase mb-4 sm:mb-6">
               Materials
             </span>
-            <h1 className="font-display text-[#073F3A] text-[36px] sm:text-[40px] md:text-[46px] leading-[1.1] font-semibold mb-6 max-w-[400px]">
+            <h1 className="font-display text-[#073F3A] text-[42px] sm:text-[52px] md:text-[60px] leading-[1.05] font-semibold mb-6 max-w-[500px]">
               The foundation<br/>of beautiful spaces
             </h1>
-            <p className="text-[#6F8580] text-base leading-[1.6] mb-10 max-w-[450px]">
+            <p className="text-[#073F3A]/85 text-[17px] leading-[1.6] mb-10 max-w-[480px]">
               We work with carefully selected materials that combine aesthetic appeal, durability, and everyday functionality — so your space looks beautiful today and lasts for years to come.
             </p>
 
@@ -32,8 +32,8 @@ export default function MaterialsPage() {
                   <span className="text-[#C8A45D] text-[9px] font-bold">01</span>
                 </div>
                 <div>
-                  <h4 className="text-[#073F3A] text-xs font-bold uppercase tracking-wider mb-1">Premium Quality</h4>
-                  <p className="text-[#6F8580] text-[11px] uppercase tracking-wider">Trusted brands</p>
+                  <h4 className="text-[#073F3A] text-[13px] font-bold uppercase tracking-wider mb-1">Premium Quality</h4>
+                  <p className="text-[#073F3A]/70 text-[11px] uppercase tracking-wider">Trusted brands</p>
                 </div>
               </div>
 
@@ -42,8 +42,8 @@ export default function MaterialsPage() {
                   <span className="text-[#C8A45D] text-[9px] font-bold">02</span>
                 </div>
                 <div>
-                  <h4 className="text-[#073F3A] text-xs font-bold uppercase tracking-wider mb-1">Durable & Long-lasting</h4>
-                  <p className="text-[#6F8580] text-[11px] uppercase tracking-wider">Built for everyday</p>
+                  <h4 className="text-[#073F3A] text-[13px] font-bold uppercase tracking-wider mb-1">Durable & Long-lasting</h4>
+                  <p className="text-[#073F3A]/70 text-[11px] uppercase tracking-wider">Built for everyday</p>
                 </div>
               </div>
 
@@ -52,8 +52,8 @@ export default function MaterialsPage() {
                   <span className="text-[#C8A45D] text-[9px] font-bold">03</span>
                 </div>
                 <div>
-                  <h4 className="text-[#073F3A] text-xs font-bold uppercase tracking-wider mb-1">Aesthetic & Functional</h4>
-                  <p className="text-[#6F8580] text-[11px] uppercase tracking-wider">Designed for real spaces</p>
+                  <h4 className="text-[#073F3A] text-[13px] font-bold uppercase tracking-wider mb-1">Aesthetic & Functional</h4>
+                  <p className="text-[#073F3A]/70 text-[11px] uppercase tracking-wider">Designed for real spaces</p>
                 </div>
               </div>
             </div>
