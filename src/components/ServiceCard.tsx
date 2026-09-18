@@ -6,9 +6,9 @@ export default function ServiceCard({ service }: { service: Service }) {
   return (
     <Link
       to={`/services/${service.slug}`}
-      className="group flex flex-col w-full bg-[#FFFDF9] rounded-[18px] border border-[#E4DED3]/60 overflow-hidden hover:-translate-y-1 hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-400 ease-out"
+      className="group flex flex-col w-full bg-[#FFFDF9] rounded-[18px] border border-[#2D3331]/30 overflow-hidden hover:-translate-y-1 hover:shadow-[0_8px_30px_rgb(0,0,0,0.06)] transition-all duration-400 ease-out"
     >
-      <div className="w-full aspect-[4/3] bg-[#E9E1D3] relative overflow-hidden">
+      <div className="w-full aspect-[4/3] bg-[#E9E1D3] relative overflow-hidden border-b border-[#2D3331]/30">
         <img
           src={serviceImages[service.slug] || heroFallbackImage}
           alt={`${service.name} interior design`}
