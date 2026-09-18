@@ -118,7 +118,7 @@ export default function HomePage() {
           <div className="flex flex-col md:flex-row md:items-start gap-12 md:gap-8 lg:gap-16">
             
             {/* Left Column */}
-            <div className="w-full md:w-[35%] lg:w-[33%] flex flex-col pt-2 lg:pt-4">
+            <div className="w-full md:w-[35%] lg:w-[33%] flex flex-col">
               
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-8 sm:w-12 h-px bg-[#C9A45C]"></div>
