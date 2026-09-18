@@ -7,6 +7,12 @@
 // available. next.config.mjs already allowlists images.unsplash.com.
 
 export const serviceImages: Record<string, string> = {
+  "residential-interior": "/images/services/residential.jpg",
+  "commercial-interior": "/images/services/commercial.jpg",
+  "corporate-office-interior": "/images/services/corporate.jpg",
+  "industrial-interior": "/images/services/industrial.jpg",
+  "false-ceiling": "/images/services/ceiling.jpg",
+  "aluminium-glass-works": "/images/services/glass.jpg",
   "residential-interiors": "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?fm=jpg&q=75&w=1200&auto=format&fit=crop",
   "villa-interiors": "https://images.unsplash.com/photo-1638885930125-85350348d266?fm=jpg&q=75&w=1200&auto=format&fit=crop",
   "apartment-interiors": "https://images.unsplash.com/photo-1699239116624-85268dce7377?fm=jpg&q=75&w=1200&auto=format&fit=crop",
