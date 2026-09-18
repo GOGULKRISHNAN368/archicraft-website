@@ -71,7 +71,7 @@ export default function Header() {
           </Link>
           <button
             aria-label="Toggle menu"
-            className="lg:hidden text-teal-900"
+            className="lg:hidden text-teal-900 p-2 -mr-2 min-h-[44px] min-w-[44px] flex items-center justify-center"
             onClick={() => setMenuOpen((v) => !v)}
           >
             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -98,18 +98,18 @@ export default function Header() {
               <Link
                 to={item.href}
                 onClick={() => setMenuOpen(false)}
-                className="font-display text-lg text-teal-900"
+                className="block py-2 font-display text-xl sm:text-2xl text-teal-900 font-medium"
               >
                 {item.label}
               </Link>
               {item.children && (
-                <div className="mt-2 pl-3 flex flex-col gap-2">
+                <div className="mt-2 pl-4 flex flex-col gap-1 border-l-2 border-softgrey ml-2">
                   {item.children.map((child) => (
                     <Link
                       key={child.href}
                       to={child.href}
                       onClick={() => setMenuOpen(false)}
-                      className="text-sm text-teal-900/70"
+                      className="block py-2.5 text-base text-teal-900/80"
                     >
                       {child.label}
                     </Link>

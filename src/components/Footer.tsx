@@ -50,7 +50,7 @@ export default function Footer() {
             <div className="w-8 sm:w-12 h-px bg-[#C9A45C]"></div>
           </div>
           
-          <h2 className="font-display text-[#F7F3EA] text-[34px] sm:text-[44px] lg:text-[56px] leading-[1.05] font-semibold mb-6">
+          <h2 className="font-display text-[#F7F3EA] text-[30px] sm:text-[44px] lg:text-[56px] leading-[1.05] font-semibold mb-6">
             Let’s create something<br className="hidden sm:block"/> extraordinary, together
           </h2>
           
@@ -60,7 +60,7 @@ export default function Footer() {
 
           <Link
             to="/contact"
-            className="group inline-flex items-center justify-center w-[250px] sm:w-[280px] h-[58px] sm:h-[62px] bg-[#C9A45C] hover:bg-[#D4AF6A] text-[#073F3A] font-sans font-semibold text-[15px] sm:text-[16px] tracking-[0.5px] uppercase rounded-[5px] shadow-sm hover:shadow-md hover:-translate-y-[3px] transition-all duration-300"
+            className="group inline-flex items-center justify-center w-[90%] max-w-[280px] h-[58px] sm:h-[62px] bg-[#C9A45C] hover:bg-[#D4AF6A] text-[#073F3A] font-sans font-semibold text-[15px] sm:text-[16px] tracking-[0.5px] uppercase rounded-[5px] shadow-sm hover:shadow-md hover:-translate-y-[3px] transition-all duration-300"
           >
             Book a Consultation
             <span className="ml-3 transform group-hover:translate-x-[5px] transition-transform duration-300">
@@ -115,7 +115,7 @@ export default function Footer() {
               <ul className="flex flex-col space-y-4">
                 {footerServiceLinks.map((l) => (
                   <li key={l.href}>
-                    <Link to={l.href} className="inline-block text-[#F7F3EA] text-[16px] transition-all duration-250 hover:text-[#C9A45C] hover:translate-x-[3px]">
+                    <Link to={l.href} className="inline-block py-1 sm:py-0 text-[#F7F3EA] text-[16px] transition-all duration-250 hover:text-[#C9A45C] hover:translate-x-[3px]">
                       {l.label}
                     </Link>
                   </li>
@@ -129,7 +129,7 @@ export default function Footer() {
               <ul className="flex flex-col space-y-4">
                 {footerCompanyLinks.map((l) => (
                   <li key={l.href}>
-                    <Link to={l.href} className="inline-block text-[#F7F3EA] text-[16px] transition-all duration-250 hover:text-[#C9A45C] hover:translate-x-[3px]">
+                    <Link to={l.href} className="inline-block py-1 sm:py-0 text-[#F7F3EA] text-[16px] transition-all duration-250 hover:text-[#C9A45C] hover:translate-x-[3px]">
                       {l.label}
                     </Link>
                   </li>
@@ -142,12 +142,12 @@ export default function Footer() {
               <p className="text-[#C9A45C] text-[13px] font-semibold tracking-[2.5px] uppercase mb-6">Contact</p>
               <ul className="flex flex-col space-y-4 mb-8">
                 <li>
-                  <a href={site.phoneHref} className="inline-block text-[#F7F3EA] text-[16px] transition-all duration-250 hover:text-[#C9A45C] hover:translate-x-[3px]">
+                  <a href={site.phoneHref} className="inline-block py-1 sm:py-0 text-[#F7F3EA] text-[16px] transition-all duration-250 hover:text-[#C9A45C] hover:translate-x-[3px]">
                     {site.phone}
                   </a>
                 </li>
                 <li>
-                  <a href={`mailto:${site.email}`} className="inline-block text-[#F7F3EA] text-[16px] transition-all duration-250 hover:text-[#C9A45C] hover:translate-x-[3px]">
+                  <a href={`mailto:${site.email}`} className="inline-block py-1 sm:py-0 text-[#F7F3EA] text-[16px] transition-all duration-250 hover:text-[#C9A45C] hover:translate-x-[3px]">
                     {site.email}
                   </a>
                 </li>

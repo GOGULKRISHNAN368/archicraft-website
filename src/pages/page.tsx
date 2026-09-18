@@ -34,15 +34,15 @@ export default function HomePage() {
 
       <StatsBar />
 
-      <section className="max-w-content mx-auto px-4 sm:px-6 lg:px-10 py-16 sm:py-24">
+      <section className="max-w-content mx-auto px-4 sm:px-6 lg:px-10 py-10 sm:py-24">
         <SectionHeading
           eyebrow="What We Design"
           title="One studio, every space that matters"
           subtitle="From the kitchen where the day begins to the pooja room where it's grounded â€” we design every corner of your home and workplace with the same care."
         />
-        <div className="mt-10 sm:mt-12 flex gap-5 overflow-x-auto snap-x snap-mandatory pb-4 sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:overflow-visible hide-scrollbar">
+        <div className="mt-10 sm:mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {featuredServices.map((s) => (
-            <div key={s.slug} className="w-[85vw] sm:w-auto flex-shrink-0 snap-start flex">
+            <div key={s.slug} className="flex">
               <ServiceCard service={s} />
             </div>
           ))}
@@ -52,7 +52,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-beige py-16 sm:py-24">
+      <section className="bg-beige py-10 sm:py-24">
         <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-10">
           <SectionHeading title="Designed with intention. Built to last." />
           <div className="mt-10 sm:mt-12">
@@ -61,9 +61,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="max-w-content mx-auto px-4 sm:px-6 lg:px-10 py-16 sm:py-24">
+      <section className="max-w-content mx-auto px-4 sm:px-6 lg:px-10 py-10 sm:py-24">
         <SectionHeading eyebrow="A few spaces we're proud of" title="Featured projects" />
-        <div className="mt-10 sm:mt-12 flex gap-5 overflow-x-auto snap-x snap-mandatory pb-2 sm:grid sm:grid-cols-3 sm:overflow-visible">
+        <div className="mt-10 sm:mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {featuredProjects.map((p) => (
             <PortfolioCard key={p.slug} project={p} />
           ))}
@@ -73,7 +73,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-teal py-16 sm:py-24">
+      <section className="bg-teal py-10 sm:py-24">
         <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-10">
           <SectionHeading
             eyebrow="A seamless journey from inspiration to exceptional interiors"
@@ -97,7 +97,7 @@ export default function HomePage() {
         <TrustedBrands />
       </section>
 
-      <section className="max-w-content mx-auto px-4 sm:px-6 lg:px-10 pt-8 pb-16 sm:pt-12 sm:pb-24">
+      <section className="max-w-content mx-auto px-4 sm:px-6 lg:px-10 pt-8 pb-10 sm:pt-12 sm:pb-24">
         <SectionHeading title="What clients say about working with us" />
         <div className="mt-10 sm:mt-12">
           <Testimonials />

@@ -3,10 +3,10 @@ import { services } from "@/data/services";
 
 export default function ServicesPage() {
   return (
-    <section className="bg-[#F6F2EA] min-h-screen py-16 sm:py-24">
+    <section className="bg-[#F6F2EA] min-h-screen py-10 sm:py-24">
       <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-[70px]">
-        <div className="mb-16 sm:mb-20">
-          <h1 className="font-display text-[#073F3A] text-4xl sm:text-5xl lg:text-[54px] font-medium mb-6">
+        <div className="mb-12 sm:mb-20">
+          <h1 className="font-display text-[#073F3A] text-[32px] leading-tight sm:text-5xl lg:text-[54px] font-medium mb-4 sm:mb-6">
             One studio, every space that matters
           </h1>
           <p className="text-[#6F8580] text-lg sm:text-[20px] max-w-2xl">

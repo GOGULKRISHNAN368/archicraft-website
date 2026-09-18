@@ -7,7 +7,7 @@ export default function PortfolioCard({ project }: { project: Project }) {
   return (
     <Link
       to={`/portfolio/${project.slug}`}
-      className="group flex-shrink-0 w-[80vw] sm:w-full snap-start block"
+      className="group flex-shrink-0 w-[85vw] sm:w-full snap-start block"
     >
       <div className="aspect-[4/3] bg-softgrey rounded-xl overflow-hidden relative">
         <img

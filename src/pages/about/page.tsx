@@ -29,7 +29,7 @@ export default function AboutPage() {
         imageAlt="Archicraft Interiors interior design studio team at work, Coimbatore"
       />
 
-      <section className="max-w-content mx-auto px-4 sm:px-6 lg:px-10 py-16 sm:py-24 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+      <section className="max-w-content mx-auto px-4 sm:px-6 lg:px-10 py-10 sm:py-24 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
         <div>
           <SectionHeading eyebrow="Our Story" title="Design that starts by listening" align="left" />
           <RevealOnScroll>
@@ -61,7 +61,7 @@ export default function AboutPage() {
         </RevealOnScroll>
       </section>
 
-      <section className="bg-beige py-16 sm:py-24">
+      <section className="bg-beige py-10 sm:py-24">
         <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-10">
           <SectionHeading
             eyebrow="Good design is a language, not a style"
@@ -78,14 +78,14 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="max-w-content mx-auto px-4 sm:px-6 lg:px-10 py-16 sm:py-24">
+      <section className="max-w-content mx-auto px-4 sm:px-6 lg:px-10 py-10 sm:py-24">
         <SectionHeading title="Designing spaces that reflect your style, delivered with excellence you can trust" />
         <div className="mt-10 sm:mt-12">
           <WhyChooseUs />
         </div>
       </section>
 
-      <section className="bg-teal py-16 sm:py-24">
+      <section className="bg-teal py-10 sm:py-24">
         <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-10 text-center">
           <p className="font-accent italic text-2xl sm:text-3xl text-warmwhite max-w-2xl mx-auto">
             &ldquo;Creating interiors that stand the test of time â€” designed with passion, built with precision.&rdquo;

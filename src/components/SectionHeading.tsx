@@ -20,7 +20,7 @@ export default function SectionHeading({
           {eyebrow}
         </p>
       )}
-      <h2 className={cn("font-display font-semibold text-3xl sm:text-4xl leading-tight", dark ? "text-warmwhite" : "text-teal-900")}>
+      <h2 className={cn("font-display font-semibold text-[28px] leading-[1.15] sm:text-4xl sm:leading-tight", dark ? "text-warmwhite" : "text-teal-900")}>
         {title}
       </h2>
       {subtitle && (

@@ -43,20 +43,20 @@ export default function Hero({
       )}
       <div className="absolute inset-0 bg-gradient-to-t from-teal-900/80 via-teal-900/30 to-teal-900/10" />
 
-      <div className="relative z-10 max-w-content mx-auto px-4 sm:px-6 lg:px-10 py-16 sm:py-24 w-full">
+      <div className="relative z-10 max-w-content mx-auto px-4 sm:px-6 lg:px-10 py-12 sm:py-24 w-full">
         <div className="max-w-2xl">
           {eyebrow && <p className="font-accent italic text-gold text-lg sm:text-xl mb-3">{eyebrow}</p>}
-          <h1 className="font-display font-semibold text-4xl sm:text-5xl lg:text-6xl text-warmwhite leading-tight">
+          <h1 className="font-display font-semibold text-[36px] leading-[1.1] sm:text-5xl lg:text-6xl text-warmwhite sm:leading-tight">
             {title}
           </h1>
-          <p className="mt-4 sm:mt-6 text-warmwhite/85 text-base sm:text-lg max-w-xl">{subtitle}</p>
-          <div className="mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4">
-            <Button to={primaryHref}>{primaryCta}</Button>
+          <p className="mt-4 sm:mt-6 text-warmwhite/85 text-[16px] leading-relaxed sm:text-lg max-w-xl">{subtitle}</p>
+          <div className="mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
+            <Button to={primaryHref} className="w-full sm:w-auto min-h-[48px]">{primaryCta}</Button>
             {secondaryCta && secondaryHref && (
               <Button
                 to={secondaryHref}
                 variant="secondary"
-                className="!border-warmwhite !text-warmwhite hover:!bg-warmwhite hover:!text-teal-900"
+                className="w-full sm:w-auto min-h-[48px] !border-warmwhite !text-warmwhite hover:!bg-warmwhite hover:!text-teal-900"
               >
                 {secondaryCta}
               </Button>
