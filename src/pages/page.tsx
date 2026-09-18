@@ -105,7 +105,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="relative w-full min-h-[800px] bg-[#F3EEE5] overflow-hidden flex flex-col justify-center">
+      <section className="relative w-full bg-[#F3EEE5] overflow-hidden flex flex-col justify-center">
         {/* Background Image */}
         <div 
           className="absolute inset-0 z-0 bg-[url('/images/faq-bg.png')] bg-cover bg-no-repeat"
@@ -114,15 +114,15 @@ export default function HomePage() {
         ></div>
 
         {/* Content Container */}
-        <div className="relative z-10 w-full max-w-[1450px] mx-auto px-5 sm:px-8 lg:px-[60px] py-[50px] sm:py-[60px] lg:py-[80px]">
+        <div className="relative z-10 w-full max-w-[1450px] mx-auto px-5 sm:px-8 lg:px-[60px] py-[40px] sm:py-[50px] lg:py-[60px]">
           <div className="flex flex-col md:flex-row md:items-start gap-12 md:gap-8 lg:gap-16">
             
             {/* Left Column */}
             <div className="w-full md:w-[35%] lg:w-[33%] flex flex-col">
               
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-8 sm:w-12 h-px bg-[#C9A45C]"></div>
-                <span className="text-[#C9A45C] text-[12px] sm:text-[13px] font-medium tracking-[3px] uppercase">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-8 sm:w-10 h-px bg-[#C9A45C]"></div>
+                <span className="text-[#C9A45C] text-[11px] sm:text-[12px] font-medium tracking-[3px] uppercase">
                   Frequently Asked Questions
                 </span>
               </div>
