@@ -131,15 +131,9 @@ export default function HomePage() {
                 Questions,<br/>answered
               </h2>
               
-              <p className="text-[#6F7C78] text-[16px] lg:text-[19px] leading-[1.6] max-w-[320px] mb-12">
+              <p className="text-[#6F7C78] text-[16px] lg:text-[19px] leading-[1.6] max-w-[320px] mb-8 md:mb-0">
                 Everything you need to know before we begin designing your space.
               </p>
-              
-              <div className="w-16 h-px bg-[#C9A45C] mb-8"></div>
-              
-              <div className="text-[#6F7C78]/70 text-[10px] sm:text-[11px] font-medium tracking-[3px] uppercase leading-[1.8] mb-8 md:mb-0">
-                Spaces for<br/>a better<br/>tomorrow
-              </div>
             </div>
 
             {/* Right Column - FAQ Accordion */}
