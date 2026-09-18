@@ -4,6 +4,7 @@ import SectionHeading from "@/components/SectionHeading";
 import ServiceCard from "@/components/ServiceCard";
 import PortfolioCard from "@/components/PortfolioCard";
 import MaterialCard from "@/components/MaterialCard";
+import HomeMaterials from "@/components/HomeMaterials";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import ProcessTimeline from "@/components/ProcessTimeline";
 import BrandPartners from "@/components/BrandPartners";
@@ -13,7 +14,6 @@ import Button from "@/components/Button";
 import RevealOnScroll from "@/components/RevealOnScroll";
 import { services } from "@/data/services";
 import { projects } from "@/data/portfolio";
-import { materials } from "@/data/materials";
 import { homeFaqs } from "@/data/faqs";
 
 export default function HomePage() {
@@ -89,20 +89,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="max-w-content mx-auto px-4 sm:px-6 lg:px-10 py-16 sm:py-24">
-        <SectionHeading
-          title="Luxury begins with the right material"
-          subtitle="We work in PU finish, laminate, membrane, acrylic, and lacquer â€” each chosen for how it will actually perform in your home."
-        />
-        <div className="mt-10 sm:mt-12 flex gap-4 overflow-x-auto snap-x snap-mandatory pb-2 sm:grid sm:grid-cols-3 lg:grid-cols-6 sm:overflow-visible">
-          {materials.map((m) => (
-            <MaterialCard key={m.slug} material={m} />
-          ))}
-        </div>
-        <div className="text-center mt-8">
-          <Button to="/materials" variant="secondary">Explore Our Materials</Button>
-        </div>
-      </section>
+      <HomeMaterials />
 
       <section className="bg-beige py-14 sm:py-16">
         <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-10">
