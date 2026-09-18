@@ -7,7 +7,7 @@ import MaterialCard from "@/components/MaterialCard";
 import HomeMaterials from "@/components/HomeMaterials";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import ProcessTimeline from "@/components/ProcessTimeline";
-import BrandPartners from "@/components/BrandPartners";
+import TrustedBrands from "@/components/TrustedBrands";
 import Testimonials from "@/components/Testimonials";
 import FaqAccordion from "@/components/FaqAccordion";
 import Button from "@/components/Button";
@@ -91,11 +91,8 @@ export default function HomePage() {
 
       <HomeMaterials />
 
-      <section className="bg-beige py-14 sm:py-16">
-        <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-10">
-          <p className="text-center text-xs uppercase tracking-wide text-teal-900/50 mb-8">Backed by names you already trust</p>
-          <BrandPartners />
-        </div>
+      <section className="w-full flex">
+        <TrustedBrands />
       </section>
 
       <section className="max-w-content mx-auto px-4 sm:px-6 lg:px-10 py-16 sm:py-24">
