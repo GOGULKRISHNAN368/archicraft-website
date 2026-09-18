@@ -14,7 +14,7 @@ export default function FaqAccordion({ items }: { items: { q: string; a: string 
         return (
           <div key={item.q} className="border-b border-[rgba(7,63,58,0.12)]">
             <button
-              className="w-full text-left py-4 sm:py-5 group flex flex-col sm:flex-row sm:items-start"
+              className="w-full text-left py-5 sm:py-6 group flex flex-col sm:flex-row sm:items-start"
               onClick={() => setOpenIndex(isOpen ? null : i)}
               aria-expanded={isOpen}
             >
@@ -41,7 +41,7 @@ export default function FaqAccordion({ items }: { items: { q: string; a: string 
                   <span className="text-[#C9A45C] font-sans font-medium text-[15px] lg:text-[16px] leading-[1.3] mr-5 lg:mr-6 mt-[2px]">
                     {numStr}
                   </span>
-                  <div className="w-[1px] h-full min-h-[25px] bg-[rgba(7,63,58,0.12)] mr-5 lg:mr-6"></div>
+                  <div className="w-[1px] h-full min-h-[30px] bg-[rgba(7,63,58,0.12)] mr-5 lg:mr-6"></div>
                 </div>
                 
                 <span className="font-display font-normal text-[18px] lg:text-[21px] text-[#073F3A] leading-snug pr-6 pt-0">
@@ -65,7 +65,7 @@ export default function FaqAccordion({ items }: { items: { q: string; a: string 
               }`}
             >
               <div className="overflow-hidden">
-                <div className="pb-5 sm:pb-6 pt-0 sm:pl-[75px] lg:pl-[95px]">
+                <div className="pb-6 sm:pb-7 pt-0 sm:pl-[75px] lg:pl-[95px]">
                   <p className="text-[#697873] text-[14px] lg:text-[15px] leading-[1.6] max-w-[650px]">
                     {item.a}
                   </p>
