@@ -17,6 +17,7 @@ export const site = {
 };
 
 export const primaryNav = [
+  { label: "Home", href: "/" },
   {
     label: "Services",
     href: "/services",
