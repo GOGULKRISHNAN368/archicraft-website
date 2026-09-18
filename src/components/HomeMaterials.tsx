@@ -14,7 +14,7 @@ export default function HomeMaterials() {
       <div className="hidden lg:block absolute left-8 top-0 bottom-0 w-px bg-[#B9965A]/20"></div>
       <div className="hidden lg:block absolute right-8 top-0 bottom-0 w-px bg-[#B9965A]/20"></div>
 
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 relative z-10 pb-12 sm:pb-16">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 relative z-10 pb-8 sm:pb-10">
         
         {/* Header Area */}
         <div className="flex flex-col items-center text-center max-w-[700px] mx-auto mb-10 sm:mb-12">
