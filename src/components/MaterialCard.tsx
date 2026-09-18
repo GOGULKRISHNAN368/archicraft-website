@@ -8,7 +8,7 @@ export default function MaterialCard({ material, index }: { material: Material, 
       to={`/materials/${material.slug}`}
       className="group flex flex-col items-start block"
     >
-      <div className="w-full aspect-[4/3] rounded-[4px] overflow-hidden mb-5 sm:mb-6 bg-[#E9E1D3]">
+      <div className="w-full aspect-[4/3] rounded-[4px] overflow-hidden mb-5 sm:mb-6 bg-[#E9E1D3] border border-black/80">
         <img
           src={materialImages[material.slug] || heroFallbackImage}
           alt={`${material.name} interior finish`}
