@@ -1,6 +1,6 @@
 
 
-import { useState, useRef, useEffect } from "react";
+import { useState } from "react";
 
 export default function FaqAccordion({ items }: { items: { q: string; a: string }[] }) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -14,16 +14,16 @@ export default function FaqAccordion({ items }: { items: { q: string; a: string 
         return (
           <div key={item.q} className="border-b border-[rgba(7,63,58,0.12)]">
             <button
-              className="w-full text-left py-5 sm:py-6 group flex flex-col sm:flex-row sm:items-start"
+              className="w-full min-w-0 text-left py-5 sm:py-6 group flex flex-col sm:flex-row sm:items-start"
               onClick={() => setOpenIndex(isOpen ? null : i)}
               aria-expanded={isOpen}
             >
               {/* Mobile Layout: Number and Question */}
-              <div className="flex w-full sm:hidden items-start gap-4">
+              <div className="flex w-full min-w-0 sm:hidden items-start gap-4">
                 <span className="text-[#C9A45C] font-sans font-medium text-[15px] sm:text-[16px] leading-snug shrink-0 mt-[1px]">
                   {numStr}
                 </span>
-                <span className="font-display font-medium text-[17px] sm:text-[18px] text-[#073F3A] leading-snug grow pr-2">
+                <span className="min-w-0 font-display font-medium text-[17px] sm:text-[18px] text-[#073F3A] leading-snug grow pr-2">
                   {item.q}
                 </span>
                 <div 

@@ -1,21 +1,10 @@
-import { Navigate } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
 import Button from "@/components/Button";
 import { blogPosts, getPostBySlug } from "@/data/blog";
 
-export function generateStaticParams() {
-  return blogPosts.map((p) => ({ slug: p.slug }));
-}
-
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const post = (slug!);
-  if (!post) return {};
-  return { title: post.seoTitle, description: post.metaDescription };
-}
-
-import { useParams } from "react-router-dom";
 export default function BlogPostPage() {
   const { slug } = useParams();
-  const post = (slug!);
+  const post = slug ? getPostBySlug(slug) : undefined;
   if (!post) return <Navigate to="/not-found" replace />;
 
   return (

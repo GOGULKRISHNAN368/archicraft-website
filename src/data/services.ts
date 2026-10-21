@@ -30,7 +30,7 @@ export const services: Service[] = [
       "Living Room Design - Elegant feature walls and TV units"
     ],
     processNote: "Our process ensures every room connects with a consistent design language.",
-    relatedMaterials: ["pu-finish", "laminate", "premium-surface"],
+    relatedMaterials: ["pu-finish", "laminate", "premium-surfaces"],
     faqs: [
       { q: "Do you design the entire home or individual rooms?", a: "Both — many clients start with one room and expand." },
       { q: "Can you work with an existing structure?", a: "Yes, we regularly work within existing layouts." }
@@ -51,7 +51,7 @@ export const services: Service[] = [
       "Café Interior - Inviting and Instagram-worthy aesthetics"
     ],
     processNote: "Execution is planned to minimize disruption to your business.",
-    relatedMaterials: ["lacquer-finish", "premium-surface"],
+    relatedMaterials: ["lacquer-finish", "premium-surfaces"],
     faqs: [
       { q: "Do you handle complete retail fit-outs?", a: "Yes, we handle end-to-end design and execution for commercial spaces." }
     ],
@@ -92,7 +92,7 @@ export const services: Service[] = [
       "Professional aesthetic integration for administrative zones"
     ],
     processNote: "Industrial projects require careful coordination with structural and safety requirements.",
-    relatedMaterials: ["membrane", "premium-surface"],
+    relatedMaterials: ["membrane", "premium-surfaces"],
     faqs: [
       { q: "Do you design administrative areas within industrial facilities?", a: "Yes, we integrate both factory-floor requirements and modern office spaces." }
     ],
@@ -112,7 +112,7 @@ export const services: Service[] = [
       "Custom Designs - Unique drops and patterns tailored to the room"
     ],
     processNote: "Ceiling drop heights are confirmed during site measurement to minimise height loss.",
-    relatedMaterials: ["premium-surface"],
+    relatedMaterials: ["premium-surfaces"],
     faqs: [
       { q: "Does a false ceiling reduce room height noticeably?", a: "We plan ceiling drops carefully to minimise height loss." }
     ],
@@ -132,7 +132,7 @@ export const services: Service[] = [
       "Toilet Partition - Hygienic and robust commercial restroom solutions"
     ],
     processNote: "Measurements are taken with millimeter precision to ensure perfect glass fitting.",
-    relatedMaterials: ["premium-surface"],
+    relatedMaterials: ["premium-surfaces"],
     faqs: [
       { q: "Are the glass partitions toughened?", a: "Yes, we exclusively use toughened safety glass for all partition and cubicle works." }
     ],

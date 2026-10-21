@@ -72,7 +72,7 @@ export default function MaterialsPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-16 gap-x-10 lg:gap-x-12">
+          <div className="grid grid-cols-2 gap-3 sm:gap-5 lg:gap-6">
             {materials.map((m, idx) => (
               <MaterialCard key={m.slug} material={m} index={idx + 1} />
             ))}

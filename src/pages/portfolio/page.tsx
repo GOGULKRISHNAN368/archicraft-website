@@ -9,10 +9,11 @@ export default function PortfolioPage() {
     <section className="max-w-content mx-auto px-4 sm:px-6 lg:px-10 py-16 sm:py-24">
       <SectionHeading
         eyebrow="Projects"
-        title="Showcasing spaces that reflect our commitment to design excellence"
+        title="Projects shaped around the way you live"
+        subtitle="Explore considered homes and interiors, designed with care and crafted for everyday life."
         align="left"
       />
-      <div className="mt-10 sm:mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10">
+      <div className="mt-8 grid grid-cols-2 gap-x-3 gap-y-7 sm:mt-12 sm:gap-x-6 sm:gap-y-10 lg:grid-cols-3">
         {projects.map((p) => (
           <PortfolioCard key={p.slug} project={p} />
         ))}

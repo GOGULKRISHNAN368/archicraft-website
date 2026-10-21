@@ -9,19 +9,19 @@ import { aboutImage } from "@/data/images";
 
 
 const coreIdeas = [
-  "Thoughtful Ideas â€” ideas that spark beautiful possibilities",
-  "Intelligent Spaces â€” layouts that work as hard as they look good",
-  "Meaningful Experiences â€” designed around how you'll actually use a space",
-  "Designed With Purpose â€” nothing added without a reason",
-  "Planned With Precision â€” every measurement, every material, considered",
-  "Created For Living â€” because a beautiful room still has to be lived in",
+  "Thoughtful Ideas — ideas that spark beautiful possibilities",
+  "Intelligent Spaces — layouts that work as hard as they look good",
+  "Meaningful Experiences — designed around how you'll actually use a space",
+  "Designed With Purpose — nothing added without a reason",
+  "Planned With Precision — every measurement, every material, considered",
+  "Created For Living — because a beautiful room still has to be lived in",
 ];
 
 export default function AboutPage() {
   return (
     <>
       <Hero
-        title="A home is more than a space â€” it's where life unfolds"
+        title="A home is more than a space — it's where life unfolds"
         subtitle="At Archicraft Interiors, we transform ideas into refined spaces that balance aesthetics, comfort, and functionality to create experiences that last."
         primaryCta="Book a Consultation"
         primaryHref="/contact"
@@ -35,13 +35,13 @@ export default function AboutPage() {
           <RevealOnScroll>
             <p className="mt-6 max-w-md text-teal-900/80 leading-relaxed">
               Archicraft Interiors began with a simple belief: that good design is a language, not a style. Every home
-              has its own rhythm â€” the way a family gathers, the way morning light falls across a kitchen, the quiet
+              has its own rhythm — the way a family gathers, the way morning light falls across a kitchen, the quiet
               corner where a pooja space needs to feel still. Our work starts by listening for that rhythm, before a
               single layout is drawn.
             </p>
             <p className="mt-4 max-w-md text-teal-900/80 leading-relaxed">
               Based in Coimbatore, we&rsquo;ve since carried that approach into homes and offices across Erode, Salem,
-              and Bengaluru â€” each project shaped by the same principle: design with purpose, planned with precision,
+              and Bengaluru — each project shaped by the same principle: design with purpose, planned with precision,
               created for living.
             </p>
           </RevealOnScroll>
@@ -88,7 +88,7 @@ export default function AboutPage() {
       <section className="bg-teal py-10 sm:py-24">
         <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-10 text-center">
           <p className="font-accent italic text-2xl sm:text-3xl text-warmwhite max-w-2xl mx-auto">
-            &ldquo;Creating interiors that stand the test of time â€” designed with passion, built with precision.&rdquo;
+            &ldquo;Creating interiors that stand the test of time — designed with passion, built with precision.&rdquo;
           </p>
           <div className="mt-8">
             <Button to="/contact">Book a Consultation</Button>

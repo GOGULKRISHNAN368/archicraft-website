@@ -16,7 +16,7 @@ export default function Testimonials() {
           <p className="font-accent italic text-lg text-teal-900">&ldquo;{t.quote}&rdquo;</p>
           <p className="text-sm text-teal-900/60 mt-4">
             {t.name}
-            {t.project ? ` â€” ${t.project}` : ""}
+            {t.project ? ` — ${t.project}` : ""}
           </p>
         </div>
       ))}

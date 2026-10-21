@@ -1,7 +1,7 @@
 import { site } from "@/data/site";
 
 // Thumb-reach action bar shown only on small/medium screens (replaces a
-// single floating WhatsApp bubble per the Phase 3 UX rationale) â€” hidden
+// single floating WhatsApp bubble per the Phase 3 UX rationale) — hidden
 // on lg+ where the header CTA is already always visible.
 export default function MobileActionBar() {
   return (

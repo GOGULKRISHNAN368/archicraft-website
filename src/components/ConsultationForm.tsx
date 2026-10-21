@@ -29,7 +29,7 @@ export default function ConsultationForm() {
   if (status === "success") {
     return (
       <div className="bg-teal-100 border border-teal/20 rounded-xl p-6 sm:p-8 text-center">
-        <p className="font-display font-semibold text-xl text-teal">Thank you â€” we've received your enquiry</p>
+        <p className="font-display font-semibold text-xl text-teal">Thank you — we've received your enquiry</p>
         <p className="text-sm text-teal-900/70 mt-2">
           Our team will reach out within 24 hours. For anything urgent, WhatsApp or call us directly.
         </p>
@@ -58,8 +58,8 @@ export default function ConsultationForm() {
       <div className="sm:col-span-2">
         <label className={labelClass} htmlFor="projectType">Project type</label>
         <select id="projectType" name="projectType" className={inputClass}>
-          <option>Residential â€” Apartment</option>
-          <option>Residential â€” Villa / Independent Home</option>
+          <option>Residential — Apartment</option>
+          <option>Residential — Villa / Independent Home</option>
           <option>Modular Kitchen</option>
           <option>Office Interiors</option>
           <option>Other</option>
@@ -78,7 +78,7 @@ export default function ConsultationForm() {
           {status === "loading" ? "Sending..." : "Book a Consultation"}
         </button>
         {status === "error" && (
-          <p className="text-sm text-red-600 mt-2">Something went wrong â€” please try again or WhatsApp us directly.</p>
+          <p className="text-sm text-red-600 mt-2">Something went wrong — please try again or WhatsApp us directly.</p>
         )}
       </div>
     </form>

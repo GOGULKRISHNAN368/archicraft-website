@@ -1,10 +1,5 @@
-// Real Archicraft project photography, extracted and cropped from the
-// client-supplied brochure PDF, is used wherever a matching page exists
-// (/public/images/brochure/). Categories with no brochure equivalent
-// (residential/villa/apartment interiors, dining areas, turnkey solutions,
-// premium surfaces) still use free, non-Unsplash+ stock photography via
-// Unsplash's CDN as a placeholder — swap for real photography as it becomes
-// available. next.config.mjs already allowlists images.unsplash.com.
+// Keep image paths local where project and service photography is available.
+// Unsplash URLs are temporary fallbacks for categories without a local image.
 
 export const serviceImages: Record<string, string> = {
   "residential-interior": "/images/services/residential.jpg",
@@ -29,24 +24,32 @@ export const serviceImages: Record<string, string> = {
   "turnkey-solutions": "https://images.unsplash.com/photo-1671197244266-73129c97c096?fm=jpg&q=75&w=1200&auto=format&fit=crop",
 };
 
+const albumPhoto = (filename: string) => `/images/Archicraft-photos/${filename}`;
+
 export const portfolioImages: Record<string, string> = {
-  "the-allure": "/images/brochure/the-allure-1.jpg",
-  souvenir: "/images/brochure/souvenir-2.jpg",
-  asush: "/images/brochure/asush-1.jpg",
-  "shivaji-villas": "/images/brochure/shivaji-villas-2.jpg",
-  "the-legacy": "/images/brochure/the-legacy-1.jpg",
-  "the-envelope": "/images/brochure/the-envelope-1.jpg",
-  "anugraha-adobe": "/images/brochure/anugraha-adobe-1.jpg",
+  "the-allure": albumPhoto("IMG-20240902-WA0019.jpg"),
+  souvenir: albumPhoto("IMG20231202172449.jpg"),
+  asush: albumPhoto("IMG20220422172552.jpg"),
+  "shivaji-villas": albumPhoto("IMG20240625184815.jpg"),
+  "the-legacy": albumPhoto("FB_IMG_1658939791503.jpg"),
+  "the-envelope": albumPhoto("FB_IMG_1708399371240.jpg"),
+  "anugraha-adobe": albumPhoto("IMG20231002123102.jpg"),
+  "light-filled-residence": albumPhoto("IMG-20240902-WA0009.jpg"),
+  "warm-wood-kitchen": albumPhoto("FB_IMG_1708399358898.jpg"),
+  "contemporary-living": albumPhoto("IMG20221126182422.jpg"),
 };
 
 export const portfolioGallery: Record<string, string[]> = {
-  "the-allure": ["/images/brochure/the-allure-1.jpg", "/images/brochure/the-allure-2.jpg", "/images/brochure/the-allure-3.jpg", "/images/brochure/the-allure-4.jpg"],
-  souvenir: ["/images/brochure/souvenir-1.jpg", "/images/brochure/souvenir-2.jpg", "/images/brochure/souvenir-3.jpg", "/images/brochure/souvenir-4.jpg"],
-  asush: ["/images/brochure/asush-1.jpg", "/images/brochure/asush-2.jpg", "/images/brochure/asush-3.jpg", "/images/brochure/asush-4.jpg"],
-  "shivaji-villas": ["/images/brochure/shivaji-villas-1.jpg", "/images/brochure/shivaji-villas-2.jpg", "/images/brochure/shivaji-villas-3.jpg", "/images/brochure/shivaji-villas-4.jpg"],
-  "the-legacy": ["/images/brochure/the-legacy-1.jpg", "/images/brochure/the-legacy-2.jpg", "/images/brochure/the-legacy-3.jpg", "/images/brochure/the-legacy-4.jpg"],
-  "the-envelope": ["/images/brochure/the-envelope-1.jpg", "/images/brochure/the-envelope-2.jpg", "/images/brochure/the-envelope-3.jpg", "/images/brochure/the-envelope-4.jpg"],
-  "anugraha-adobe": ["/images/brochure/anugraha-adobe-1.jpg", "/images/brochure/anugraha-adobe-2.jpg", "/images/brochure/anugraha-adobe-3.jpg", "/images/brochure/anugraha-adobe-4.jpg"],
+  "the-allure": ["IMG-20240902-WA0017.jpg", "IMG-20240902-WA0018.jpg", "IMG-20240902-WA0019.jpg", "IMG-20240902-WA0021.jpg"].map(albumPhoto),
+  souvenir: ["IMG20231202172449.jpg", "IMG20231202172514.jpg", "IMG20231202172552.jpg", "IMG-20240227-WA0008.jpg"].map(albumPhoto),
+  asush: ["IMG20220422172216.jpg", "IMG20220422172253.jpg", "IMG20220422172552.jpg", "IMG20220422172703.jpg"].map(albumPhoto),
+  "shivaji-villas": ["IMG20240625184631.jpg", "IMG20240625184704.jpg", "IMG20240625184737.jpg", "IMG20240625184815.jpg"].map(albumPhoto),
+  "the-legacy": ["FB_IMG_1658939791503.jpg", "FB_IMG_1658939794201.jpg", "IMG20221022173052.jpg", "IMG20221022173101.jpg"].map(albumPhoto),
+  "the-envelope": ["FB_IMG_1708399371240.jpg", "FB_IMG_1708399379248.jpg", "FB_IMG_1708399381769.jpg", "FB_IMG_1708399384476.jpg"].map(albumPhoto),
+  "anugraha-adobe": ["IMG20231002122805.jpg", "IMG20231002123000.jpg", "IMG20231002123102.jpg", "IMG20231002124424.jpg"].map(albumPhoto),
+  "light-filled-residence": ["IMG-20240902-WA0009.jpg", "IMG-20240902-WA0012.jpg", "IMG-20240902-WA0013.jpg", "IMG-20240902-WA0016.jpg"].map(albumPhoto),
+  "warm-wood-kitchen": ["FB_IMG_1708399358898.jpg", "FB_IMG_1708399361536.jpg", "FB_IMG_1708399363709.jpg", "FB_IMG_1708399368949.jpg"].map(albumPhoto),
+  "contemporary-living": ["IMG20221126182422.jpg", "IMG20221126182433.jpg", "IMG20221126183145.jpg", "IMG20221126183708.jpg"].map(albumPhoto),
 };
 
 export const materialImages: Record<string, string> = {
