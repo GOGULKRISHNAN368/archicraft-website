@@ -36,12 +36,12 @@ export default function HomeMaterials() {
         </div>
 
         {/* Material Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:flex lg:flex-nowrap gap-4 lg:gap-3 overflow-x-auto pb-4 lg:pb-0 snap-x snap-mandatory hide-scrollbar">
+        <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:gap-6">
           {materials.map((m, idx) => (
             <Link
               to={`/materials/${m.slug}`}
               key={m.slug}
-              className="group flex flex-col snap-start shrink-0 w-full sm:w-auto lg:w-[calc(16.666%-12px)] min-w-[220px] max-w-[280px] lg:max-w-none bg-[#FFFDF9] border border-[#E4DED3] rounded-xl overflow-hidden shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-400 ease-out flex-1"
+              className="group flex h-full flex-col bg-[#FFFDF9] border border-[#E4DED3] rounded-xl overflow-hidden shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-400 ease-out"
             >
               {/* Image Section */}
               <div className="h-[160px] sm:h-[180px] lg:h-[190px] w-full overflow-hidden rounded-t-xl relative">

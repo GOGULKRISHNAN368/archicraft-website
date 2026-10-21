@@ -12,7 +12,7 @@ export default function Header() {
   return (
     <>
     <header className="sticky top-0 z-50 bg-warmwhite/95 backdrop-blur border-b border-softgrey">
-      {/* Utility bar â€” hidden on small screens to save vertical space on mobile */}
+      {/* Utility bar — hidden on small screens to save vertical space on mobile */}
       <div className="hidden md:flex items-center justify-end gap-6 px-6 lg:px-10 py-1.5 text-xs text-teal-900/70 bg-beige">
         <a href={site.phoneHref} className="hover:text-teal">{site.phone}</a>
         <a href={site.whatsappHref} target="_blank" className="hover:text-teal">WhatsApp</a>
@@ -20,7 +20,7 @@ export default function Header() {
       </div>
 
       <div className="flex items-center justify-between px-4 sm:px-6 lg:px-10 h-16 md:h-[72px]">
-        <Link to="/" className="flex items-center" aria-label="Archicraft Interiors â€” Home">
+        <Link to="/" className="flex items-center" aria-label="Archicraft Interiors — Home">
           <img
             src="/images/archicraft-logo.png"
             alt="Archicraft Interiors"
@@ -86,7 +86,7 @@ export default function Header() {
       </div>
     </header>
 
-    {/* Mobile full-screen drawer â€” rendered outside <header> so its `fixed`
+    {/* Mobile full-screen drawer — rendered outside <header> so its `fixed`
         positioning is relative to the viewport, not the header's backdrop-blur
         containing block (backdrop-filter/transform/etc. on an ancestor breaks
         `position: fixed` children). */}

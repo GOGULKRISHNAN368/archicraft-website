@@ -41,7 +41,8 @@ export default function Hero({
       ) : (
         <div className="absolute inset-0 bg-teal/40" />
       )}
-      <div className="absolute inset-0 bg-gradient-to-t from-teal-900/80 via-teal-900/30 to-teal-900/10" />
+      <div className="absolute inset-0 bg-emerald-950/20 mix-blend-multiply" />
+      <div className="absolute inset-0 bg-gradient-to-t from-teal-950/90 via-teal-900/45 to-emerald-950/15" />
 
       <div className="relative z-10 max-w-content mx-auto px-4 sm:px-6 lg:px-10 py-12 sm:py-24 w-full">
         <div className="max-w-2xl">

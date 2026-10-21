@@ -15,8 +15,13 @@ export default function DesignProcessPage() {
         />
       </section>
 
-      <section className="bg-teal py-16 sm:py-20">
-        <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-10">
+      <section className="relative isolate overflow-hidden py-16 sm:py-20">
+        <div
+          className="absolute inset-0 bg-[url('/images/services/residential.jpg')] bg-cover bg-center"
+          aria-hidden="true"
+        />
+        <div className="absolute inset-0 bg-[#073F3A]/85" aria-hidden="true" />
+        <div className="relative z-10 max-w-content mx-auto px-4 sm:px-6 lg:px-10">
           <ProcessTimeline />
         </div>
       </section>

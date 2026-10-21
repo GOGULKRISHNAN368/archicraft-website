@@ -1,21 +1,10 @@
-import { Navigate } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
 import Button from "@/components/Button";
 import { materials, getMaterialBySlug } from "@/data/materials";
 
-export function generateStaticParams() {
-  return materials.map((m) => ({ slug: m.slug }));
-}
-
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const material = (slug!);
-  if (!material) return {};
-  return { title: material.seoTitle, description: material.metaDescription };
-}
-
-import { useParams } from "react-router-dom";
 export default function MaterialPage() {
   const { slug } = useParams();
-  const material = (slug!);
+  const material = slug ? getMaterialBySlug(slug) : undefined;
   if (!material) return <Navigate to="/not-found" replace />;
 
   const rows = [

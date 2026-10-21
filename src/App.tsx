@@ -23,6 +23,7 @@ import Services from './pages/services/page';
 import ServiceDetails from './pages/services/[slug]/page';
 import TermsConditions from './pages/terms-conditions/page';
 import WhyChooseUs from './pages/why-choose-us/page';
+import NotFound from './pages/not-found';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -56,6 +57,7 @@ function App() {
             <Route path="/services/:slug" element={<ServiceDetails />} />
             <Route path="/terms-conditions" element={<TermsConditions />} />
             <Route path="/why-choose-us" element={<WhyChooseUs />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
         <Footer />
