@@ -23,7 +23,7 @@ export default function FaqAccordion({ items }: { items: { q: string; a: string 
                 <span className="text-[#C9A45C] font-sans font-medium text-[15px] sm:text-[16px] leading-snug shrink-0 mt-[1px]">
                   {numStr}
                 </span>
-                <span className="min-w-0 font-display font-medium text-[17px] sm:text-[18px] text-[#073F3A] leading-snug grow pr-2">
+                <span className="min-w-0 font-display font-medium text-[16px] text-[#073F3A] leading-snug grow pr-2">
                   {item.q}
                 </span>
                 <div 
@@ -44,7 +44,7 @@ export default function FaqAccordion({ items }: { items: { q: string; a: string 
                   <div className="w-[1px] h-full min-h-[30px] bg-[rgba(7,63,58,0.12)] mr-5 lg:mr-6"></div>
                 </div>
                 
-                <span className="font-display font-normal text-[18px] lg:text-[21px] text-[#073F3A] leading-snug pr-6 pt-0">
+                <span className="font-display font-normal text-[17px] lg:text-[18px] text-[#073F3A] leading-snug pr-6 pt-0">
                   {item.q}
                 </span>
                 

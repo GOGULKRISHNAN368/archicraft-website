@@ -40,9 +40,13 @@ export default function Header() {
               onMouseEnter={() => item.children && setServicesOpen(true)}
               onMouseLeave={() => item.children && setServicesOpen(false)}
             >
-              <Link to={item.href} className="font-sans text-sm text-teal-900 hover:text-teal transition-colors">
-                {item.label}
-              </Link>
+              {item.children ? (
+                <button type="button" aria-expanded={servicesOpen} onClick={() => setServicesOpen(true)} className="inline-flex items-center gap-1 font-sans text-sm text-teal-900 transition-colors hover:text-teal">
+                  {item.label}<span aria-hidden="true" className="text-xs">⌄</span>
+                </button>
+              ) : (
+                <Link to={item.href} className="font-sans text-sm text-teal-900 hover:text-teal transition-colors">{item.label}</Link>
+              )}
               {item.children && servicesOpen && (
                 <div className="absolute top-full left-0 pt-4 w-64">
                   <div className="bg-warmwhite border border-softgrey rounded-lg shadow-lg p-4">
@@ -95,14 +99,14 @@ export default function Header() {
         <nav className="flex flex-col px-6 py-6 gap-1">
           {primaryNav.map((item) => (
             <div key={item.label} className="border-b border-softgrey py-3">
-              <Link
-                to={item.href}
-                onClick={() => setMenuOpen(false)}
-                className="block py-2 font-display text-xl sm:text-2xl text-teal-900 font-medium"
-              >
-                {item.label}
-              </Link>
-              {item.children && (
+              {item.children ? (
+                <button type="button" aria-expanded={servicesOpen} onClick={() => setServicesOpen((open) => !open)} className="flex w-full items-center justify-between py-2 text-left font-display text-xl font-medium text-teal-900 sm:text-2xl">
+                  {item.label}<span aria-hidden="true" className="text-base">{servicesOpen ? "−" : "+"}</span>
+                </button>
+              ) : (
+                <Link to={item.href} onClick={() => setMenuOpen(false)} className="block py-2 font-display text-xl font-medium text-teal-900 sm:text-2xl">{item.label}</Link>
+              )}
+              {item.children && servicesOpen && (
                 <div className="mt-2 pl-4 flex flex-col gap-1 border-l-2 border-softgrey ml-2">
                   {item.children.map((child) => (
                     <Link
