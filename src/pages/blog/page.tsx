@@ -27,7 +27,7 @@ export default function BlogPage() {
           <div className="max-w-3xl">
             <p className="mb-4 flex items-center gap-3 font-accent text-lg italic text-gold-800 sm:text-xl"><span className="h-px w-8 bg-gold" />The Archicraft journal</p>
             <h1 className="font-display text-4xl font-medium leading-[1.08] text-teal-900 sm:text-6xl lg:text-7xl">Ideas for a home<br className="hidden sm:block" /> that feels like <span className="italic text-gold-800">yours.</span></h1>
-            <p className="mt-5 max-w-xl text-sm leading-7 text-teal-900/65 sm:mt-6 sm:text-base">Thoughtful advice on materials, planning, and the small details that make a room feel like home.</p>
+          <p className="mt-5 max-w-xl text-[15px] leading-[1.65] text-teal-900/70 sm:mt-6 sm:text-base sm:leading-7">Thoughtful advice on materials, planning, and the small details that make a room feel like home.</p>
           </div>
 
           {featuredPost && activeCategory === "All ideas" && (
@@ -37,9 +37,9 @@ export default function BlogPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent lg:bg-gradient-to-r lg:from-transparent lg:to-teal-900/15" />
               </div>
               <div className="flex flex-col justify-center p-6 sm:p-9 lg:p-12 xl:p-16">
-                <div className="flex items-center gap-3 text-[10px] uppercase tracking-[.2em] text-gold sm:text-xs"><span>Featured story</span><span className="h-px w-8 bg-gold/60" /><span className="text-warmwhite/55">{featuredPost.category}</span></div>
+                <div className="flex items-center gap-3 text-[11px] uppercase tracking-[.14em] text-gold sm:text-xs sm:tracking-[.2em]"><span>Featured story</span><span className="h-px w-8 bg-gold/60" /><span className="text-warmwhite/55">{featuredPost.category}</span></div>
                 <h2 className="mt-5 font-display text-2xl font-medium leading-snug sm:mt-6 sm:text-3xl lg:text-4xl">{featuredPost.title}</h2>
-                <p className="mt-4 line-clamp-2 text-sm leading-6 text-warmwhite/70 sm:mt-5 sm:text-base sm:leading-7">{featuredPost.excerpt}</p>
+                <p className="mt-4 line-clamp-2 text-[15px] leading-[1.6] text-warmwhite/80 sm:mt-5 sm:text-base sm:leading-7">{featuredPost.excerpt}</p>
                 <span className="mt-7 inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[.16em] text-gold transition-colors group-hover:text-warmwhite sm:mt-9">Read the story <span aria-hidden="true">&rarr;</span></span>
               </div>
             </Link>
@@ -55,7 +55,7 @@ export default function BlogPage() {
           </div>
           <div className="-mx-4 flex gap-2 overflow-x-auto px-4 pb-1 sm:mx-0 sm:flex-wrap sm:overflow-visible sm:px-0" role="group" aria-label="Filter ideas by category">
             {categories.map((category) => (
-              <button key={category} type="button" onClick={() => setActiveCategory(category)} aria-pressed={activeCategory === category} className={`shrink-0 rounded-full border px-4 py-2 text-xs transition-colors sm:text-sm ${activeCategory === category ? "border-teal-900 bg-teal-900 text-warmwhite" : "border-teal-900/20 text-teal-900/70 hover:border-teal-900 hover:text-teal-900"}`}>
+              <button key={category} type="button" onClick={() => setActiveCategory(category)} aria-pressed={activeCategory === category} className={`shrink-0 rounded-full border px-4 py-2.5 text-[13px] transition-colors sm:text-sm ${activeCategory === category ? "border-teal-900 bg-teal-900 text-warmwhite" : "border-teal-900/20 text-teal-900/70 hover:border-teal-900 hover:text-teal-900"}`}>
                 {category}
               </button>
             ))}

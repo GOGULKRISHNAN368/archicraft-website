@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 import { projects, type Project } from "@/data/portfolio";
 import { designProcess } from "@/lib/utils";
-import { blogPosts } from "@/data/blog";
-import { blogImages, heroFallbackImage, portfolioGallery, portfolioImages } from "@/data/images";
+import { heroFallbackImage, portfolioGallery, portfolioImages } from "@/data/images";
 
 function ProjectTile({ project, className = "", aspectClass = "aspect-[4/3]" }: { project: Project; className?: string; aspectClass?: string }) {
   return (
@@ -19,8 +18,8 @@ function ProjectTile({ project, className = "", aspectClass = "aspect-[4/3]" }: 
       </div>
       <div className="flex items-start justify-between gap-2 pt-2 sm:gap-3 sm:pt-3">
         <div>
-          <h2 className="font-display text-[11px] font-semibold leading-tight text-[#173e36] transition-colors group-hover:text-[#a07a3f] sm:text-base lg:text-lg">{project.name}</h2>
-          <p className="mt-1 text-[8px] uppercase tracking-[.1em] text-[#7d817a] sm:text-[10px] lg:text-xs">{project.location}</p>
+          <h2 className="font-display text-[15px] font-semibold leading-tight text-[#173e36] transition-colors group-hover:text-[#a07a3f] sm:text-base lg:text-lg">{project.name}</h2>
+          <p className="mt-1 text-[11px] uppercase tracking-[.08em] text-[#7d817a] sm:text-xs">{project.location}</p>
         </div>
         <span aria-hidden="true" className="mt-0.5 text-sm text-[#a07a3f] transition-transform group-hover:translate-x-1 sm:text-base">&rarr;</span>
       </div>
@@ -48,10 +47,10 @@ export default function PortfolioPage() {
         <div className="grid grid-cols-[1.12fr_.86fr] items-start gap-x-4 sm:gap-x-7 lg:gap-x-12">
           <div className="min-w-0">
             <div className="mb-5 sm:mb-8 lg:mb-10">
-              <p className="mb-2 flex items-center gap-2 text-[8px] font-semibold uppercase tracking-[.2em] text-[#a78349] sm:text-[10px]"><span className="h-px w-5 bg-[#b9965a] sm:w-7" />Selected interiors</p>
-              <h1 className="max-w-lg font-display text-[17px] font-medium leading-[1.12] text-[#173e36] sm:text-3xl lg:text-4xl">Our creations speak for themselves</h1>
-              <p className="mt-2 max-w-md text-[9px] leading-[1.55] text-[#66736c] sm:mt-3 sm:text-sm sm:leading-6">Thoughtful spaces shaped around the people who live in them, and the moments that make a house feel like home.</p>
-              <Link to="/contact" className="mt-3 inline-flex items-center gap-1.5 bg-[#b9965a] px-2.5 py-1.5 text-[7px] font-semibold uppercase tracking-[.12em] text-white transition-colors hover:bg-[#92713e] sm:mt-4 sm:gap-2 sm:px-3 sm:py-2 sm:text-[9px]">Start a project <span aria-hidden="true">&rarr;</span></Link>
+              <p className="mb-2 flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[.16em] text-[#a78349] sm:text-xs"><span className="h-px w-5 bg-[#b9965a] sm:w-7" />Selected interiors</p>
+              <h1 className="max-w-lg font-display text-[clamp(1.5rem,6vw,2rem)] font-medium leading-[1.12] text-[#173e36] sm:text-3xl lg:text-4xl">Our creations speak for themselves</h1>
+              <p className="mt-3 max-w-md text-[14px] leading-[1.6] text-[#66736c] sm:text-sm sm:leading-6">Thoughtful spaces shaped around the people who live in them, and the moments that make a house feel like home.</p>
+              <Link to="/contact" className="mt-4 inline-flex min-h-10 items-center gap-2 bg-[#b9965a] px-4 py-2 text-[11px] font-semibold uppercase tracking-[.1em] text-white transition-colors hover:bg-[#92713e] sm:text-xs">Start a project <span aria-hidden="true">&rarr;</span></Link>
             </div>
             {first && <ProjectTile project={first} aspectClass="aspect-[1.55/1]" />}
             {third && <ProjectTile project={third} className="mt-5 sm:mt-7 lg:mt-9" aspectClass="aspect-[1.55/1]" />}
@@ -108,30 +107,6 @@ export default function PortfolioPage() {
             </div>
             <div className="grid grid-cols-2 gap-x-3 gap-y-5 sm:gap-x-6 sm:gap-y-8 lg:grid-cols-3">
               {additionalProjects.map((project) => <ProjectTile key={project.slug} project={project} />)}
-            </div>
-          </div>
-        </section>
-      )}
-
-      {blogPosts.length > 0 && (
-        <section className="border-t border-[#dfd8cc] bg-[#fbf9f5]">
-          <div className="mx-auto max-w-[1400px] px-4 py-12 sm:px-6 sm:py-16 lg:px-10 lg:py-20">
-            <div className="mb-7 text-center sm:mb-10">
-              <p className="font-accent text-lg italic text-[#a78349]">From the journal</p>
-              <h2 className="mt-1 font-display text-2xl font-medium text-[#173e36] sm:text-3xl">Insights and inspiration</h2>
-              <p className="mx-auto mt-2 max-w-xl text-sm leading-6 text-[#66736c]">Ideas and practical notes to help you plan a home that feels like yours.</p>
-            </div>
-            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
-              {blogPosts.slice(0, 3).map((post) => (
-                <Link key={post.slug} to={`/blog/${post.slug}`} className="group">
-                  <div className="relative aspect-[4/3] overflow-hidden bg-[#e7e0d5]">
-                    <img src={blogImages[post.slug] || heroFallbackImage} alt="" loading="lazy" className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]" />
-                  </div>
-                  <p className="mt-4 text-[10px] font-semibold uppercase tracking-[.17em] text-[#a78349]">{post.category}</p>
-                  <h3 className="mt-2 font-display text-lg font-semibold leading-snug text-[#173e36] transition-colors group-hover:text-[#a07a3f] sm:text-xl">{post.title}</h3>
-                  <span className="mt-3 inline-flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[.14em] text-[#66736c]">Read article <span aria-hidden="true">&rarr;</span></span>
-                </Link>
-              ))}
             </div>
           </div>
         </section>

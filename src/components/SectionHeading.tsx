@@ -20,11 +20,11 @@ export default function SectionHeading({
           {eyebrow}
         </p>
       )}
-      <h2 className={cn("font-display font-semibold text-[26px] leading-[1.2] sm:text-[34px] sm:leading-tight", dark ? "text-warmwhite" : "text-teal-900")}>
+      <h2 className={cn("font-display text-[clamp(1.75rem,7vw,2.125rem)] font-semibold leading-[1.14] tracking-[-0.02em] sm:text-[34px] sm:leading-tight sm:tracking-normal", dark ? "text-warmwhite" : "text-teal-900")}>
         {title}
       </h2>
       {subtitle && (
-        <p className={cn("mt-4 text-[15px] leading-relaxed sm:text-base", dark ? "text-warmwhite/75" : "text-teal-900/70")}>{subtitle}</p>
+        <p className={cn("mt-4 text-[15px] leading-[1.65] sm:text-base sm:leading-relaxed", dark ? "text-warmwhite/80" : "text-teal-900/75")}>{subtitle}</p>
       )}
     </div>
   );

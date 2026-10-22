@@ -47,10 +47,10 @@ export default function Hero({
       <div className="relative z-10 max-w-content mx-auto px-4 sm:px-6 lg:px-10 py-12 sm:py-24 w-full">
         <div className="max-w-2xl">
           {eyebrow && <p className="font-accent italic text-base sm:text-lg mb-3">{eyebrow}</p>}
-          <h1 className="font-display font-semibold text-[34px] leading-[1.1] sm:text-[44px] lg:text-[52px] text-warmwhite sm:leading-tight">
+          <h1 className="font-display font-semibold text-[clamp(2.25rem,8vw,3rem)] leading-[1.06] tracking-[-0.025em] sm:text-[44px] lg:text-[52px] text-warmwhite sm:leading-tight sm:tracking-normal">
             {title}
           </h1>
-          <p className="mt-4 sm:mt-6 text-warmwhite/85 text-[15px] leading-relaxed sm:text-base max-w-xl">{subtitle}</p>
+          <p className="mt-4 max-w-xl text-[16px] leading-[1.6] text-warmwhite/90 sm:mt-6 sm:text-base sm:leading-relaxed">{subtitle}</p>
           <div className="mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
             <Button to={primaryHref} className="w-full sm:w-auto min-h-[48px]">{primaryCta}</Button>
             {secondaryCta && secondaryHref && (
