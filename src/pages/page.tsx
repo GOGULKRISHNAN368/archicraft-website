@@ -63,7 +63,7 @@ export default function HomePage() {
 
       <section className="max-w-content mx-auto px-4 sm:px-6 lg:px-10 py-10 sm:py-24">
         <SectionHeading eyebrow="A few spaces we're proud of" title="Featured projects" />
-        <div className="mt-8 grid grid-cols-2 gap-x-3 gap-y-6 sm:mt-12 sm:gap-6 lg:grid-cols-3">
+        <div className="mt-8 grid grid-cols-2 gap-3 sm:mt-12 sm:gap-6 lg:grid-cols-2">
           {featuredProjects.map((p) => (
             <PortfolioCard key={p.slug} project={p} />
           ))}
