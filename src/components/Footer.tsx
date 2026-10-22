@@ -72,11 +72,11 @@ export default function Footer() {
 
       {/* 2. FOOTER */}
       <footer className="bg-[#073F3A] text-[#F7F3EA] pb-10">
-        <div className="max-w-[1450px] mx-auto px-6 lg:px-[50px] pt-[60px] lg:pt-[70px] pb-[30px]">
+        <div className="max-w-[1450px] mx-auto px-5 sm:px-6 lg:px-[50px] pt-9 sm:pt-[60px] lg:pt-[70px] pb-5 sm:pb-[30px]">
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.1fr] gap-[40px] md:gap-[60px] lg:gap-[70px]">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.1fr] gap-x-5 gap-y-7 sm:gap-[40px] md:gap-[60px] lg:gap-[70px]">
             {/* Column 1 - Brand */}
-            <div className="flex flex-col">
+            <div className="col-span-2 flex flex-col sm:col-span-1">
               <img
                 src="/images/archicraft-logo.png"
                 alt="Archicraft Interiors"
@@ -84,10 +84,10 @@ export default function Footer() {
                 height={50}
                 className="h-10 w-auto mb-6 brightness-0 invert opacity-95 object-contain"
               />
-              <p className="text-[#D8DED8] text-[15px] leading-relaxed mb-8 max-w-[280px]">
+              <p className="text-[#D8DED8] text-[14px] sm:text-[15px] leading-relaxed mb-4 sm:mb-8 max-w-[280px]">
                 Thoughtfully designed spaces<br/>for modern living.
               </p>
-              <div className="flex gap-4">
+              <div className="flex gap-3 sm:gap-4">
                 <a
                   href={site.social.instagram}
                   target="_blank"
@@ -111,11 +111,11 @@ export default function Footer() {
 
             {/* Column 2 - Services */}
             <div>
-              <p className="text-[#C9A45C] text-[13px] font-semibold tracking-[2.5px] uppercase mb-6">Services</p>
-              <ul className="flex flex-col space-y-4">
+              <p className="text-[#C9A45C] text-[12px] sm:text-[13px] font-semibold tracking-[2px] sm:tracking-[2.5px] uppercase mb-3 sm:mb-6">Services</p>
+              <ul className="flex flex-col space-y-2 sm:space-y-4">
                 {footerServiceLinks.map((l) => (
                   <li key={l.href}>
-                    <Link to={l.href} className="inline-block py-1 sm:py-0 text-[#F7F3EA] text-[16px] transition-all duration-250 hover:text-[#C9A45C] hover:translate-x-[3px]">
+                    <Link to={l.href} className="inline-block py-0.5 sm:py-0 text-[#F7F3EA] text-[14px] sm:text-[16px] transition-all duration-250 hover:text-[#C9A45C] hover:translate-x-[3px]">
                       {l.label}
                     </Link>
                   </li>
@@ -125,11 +125,11 @@ export default function Footer() {
 
             {/* Column 3 - Company */}
             <div>
-              <p className="text-[#C9A45C] text-[13px] font-semibold tracking-[2.5px] uppercase mb-6">Company</p>
-              <ul className="flex flex-col space-y-4">
+              <p className="text-[#C9A45C] text-[12px] sm:text-[13px] font-semibold tracking-[2px] sm:tracking-[2.5px] uppercase mb-3 sm:mb-6">Company</p>
+              <ul className="flex flex-col space-y-2 sm:space-y-4">
                 {footerCompanyLinks.map((l) => (
                   <li key={l.href}>
-                    <Link to={l.href} className="inline-block py-1 sm:py-0 text-[#F7F3EA] text-[16px] transition-all duration-250 hover:text-[#C9A45C] hover:translate-x-[3px]">
+                    <Link to={l.href} className="inline-block py-0.5 sm:py-0 text-[#F7F3EA] text-[14px] sm:text-[16px] transition-all duration-250 hover:text-[#C9A45C] hover:translate-x-[3px]">
                       {l.label}
                     </Link>
                   </li>
@@ -138,20 +138,20 @@ export default function Footer() {
             </div>
 
             {/* Column 4 - Contact */}
-            <div>
-              <p className="text-[#C9A45C] text-[13px] font-semibold tracking-[2.5px] uppercase mb-6">Contact</p>
-              <ul className="flex flex-col space-y-4 mb-8">
+            <div className="col-span-2 sm:col-span-1">
+              <p className="text-[#C9A45C] text-[12px] sm:text-[13px] font-semibold tracking-[2px] sm:tracking-[2.5px] uppercase mb-3 sm:mb-6">Contact</p>
+              <ul className="flex flex-col space-y-2 sm:space-y-4 mb-4 sm:mb-8">
                 <li>
-                  <a href={site.phoneHref} className="inline-block py-1 sm:py-0 text-[#F7F3EA] text-[16px] transition-all duration-250 hover:text-[#C9A45C] hover:translate-x-[3px]">
+                  <a href={site.phoneHref} className="inline-block py-0.5 sm:py-0 text-[#F7F3EA] text-[14px] sm:text-[16px] transition-all duration-250 hover:text-[#C9A45C] hover:translate-x-[3px]">
                     {site.phone}
                   </a>
                 </li>
                 <li>
-                  <a href={`mailto:${site.email}`} className="inline-block py-1 sm:py-0 text-[#F7F3EA] text-[16px] transition-all duration-250 hover:text-[#C9A45C] hover:translate-x-[3px]">
+                  <a href={`mailto:${site.email}`} className="inline-block py-0.5 sm:py-0 text-[#F7F3EA] text-[14px] sm:text-[16px] transition-all duration-250 hover:text-[#C9A45C] hover:translate-x-[3px]">
                     {site.email}
                   </a>
                 </li>
-                <li className="text-[#F7F3EA] text-[16px]">
+                <li className="text-[#F7F3EA] text-[14px] sm:text-[16px]">
                   {site.city}, Tamil Nadu
                 </li>
               </ul>
@@ -165,7 +165,7 @@ export default function Footer() {
           </div>
 
           {/* 3. FOOTER DIVIDER */}
-          <div className="w-full h-px bg-[rgba(255,255,255,0.12)] mt-[60px] mb-[30px]"></div>
+          <div className="w-full h-px bg-[rgba(255,255,255,0.12)] mt-8 sm:mt-[60px] mb-5 sm:mb-[30px]"></div>
 
           {/* 4. COPYRIGHT AREA */}
           <div className="flex flex-col sm:flex-row justify-between items-center sm:items-start gap-4 text-[#AEBDB7] text-[13px] sm:text-[14px]">

@@ -109,10 +109,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="relative w-full min-h-[500px] lg:min-h-[650px] bg-[#F3EEE5] overflow-hidden flex flex-col justify-center">
+      <section className="relative w-full min-h-[500px] lg:min-h-[650px] bg-transparent sm:bg-[#F3EEE5] overflow-hidden flex flex-col justify-center">
         {/* Photo background without embedded copy; FAQ text stays editable HTML. */}
         <div 
-          className="absolute inset-0 z-0 bg-[url('/images/services/residential.jpg')] bg-cover bg-center opacity-[0.12]"
+          className="absolute inset-0 z-0 hidden sm:block bg-[url('/images/services/residential.jpg')] bg-cover bg-center opacity-[0.12]"
           aria-hidden="true"
         />
 
