@@ -9,7 +9,8 @@ export default function MaterialsPage() {
     const carousel = carouselRef.current;
     if (!carousel) return;
     const card = carousel.querySelector<HTMLElement>("[data-material-card]");
-    carousel.scrollBy({ left: direction * ((card?.offsetWidth ?? 300) + 20), behavior: "smooth" });
+    const gap = Number.parseFloat(getComputedStyle(carousel).columnGap) || 12;
+    carousel.scrollBy({ left: direction * ((card?.offsetWidth ?? 280) + gap), behavior: "smooth" });
   };
 
   return (
@@ -34,9 +35,9 @@ export default function MaterialsPage() {
         </div>
       </section>
 
-      <section id="material-library" className="scroll-mt-20 bg-[#FBF9F5] py-16 sm:py-24">
+      <section id="material-library" className="scroll-mt-20 bg-[#FBF9F5] py-12 sm:py-16 lg:py-20">
         <div className="mx-auto max-w-[1400px] px-6 sm:px-10 lg:px-[70px]">
-          <div className="mb-8 flex flex-col gap-5 sm:mb-10 sm:flex-row sm:items-end sm:justify-between">
+          <div className="mb-6 flex flex-col gap-5 sm:mb-8 sm:flex-row sm:items-end sm:justify-between">
             <div className="max-w-2xl">
               <span className="text-[10px] font-semibold uppercase tracking-[0.25em] text-[#B9965A]">The material library</span>
               <h2 className="mt-3 font-display text-[26px] font-medium text-[#073F3A] sm:text-[32px]">Find the finish that feels right</h2>
@@ -47,9 +48,9 @@ export default function MaterialsPage() {
               <button type="button" onClick={() => moveCarousel(1)} aria-label="Show next materials" className="flex h-10 w-10 items-center justify-center rounded-full border border-[#073F3A]/25 text-[#073F3A] transition hover:bg-[#073F3A] hover:text-white">→</button>
             </div>
           </div>
-          <div ref={carouselRef} role="region" aria-label="Materials and finishes" className="-mx-6 flex snap-x snap-mandatory gap-5 overflow-x-auto px-6 pb-4 scroll-smooth sm:mx-0 sm:px-0 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          <div ref={carouselRef} role="region" aria-label="Materials and finishes" className="-mx-6 flex snap-x snap-mandatory gap-3 overflow-x-auto px-6 pb-4 scroll-smooth sm:mx-0 sm:gap-4 sm:px-0 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
             {materials.map((material, index) => (
-              <div data-material-card key={material.slug} className="w-[84%] max-w-[340px] shrink-0 snap-start sm:w-[calc((100%-1.25rem)/2)] sm:max-w-none lg:w-[calc((100%-2.5rem)/3)]">
+              <div data-material-card key={material.slug} className="w-[68%] max-w-[280px] shrink-0 snap-start sm:w-[36%] sm:max-w-[290px] lg:w-[calc((100%-3rem)/4)] lg:max-w-[310px]">
                 <MaterialCard material={material} index={index + 1} />
               </div>
             ))}

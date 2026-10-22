@@ -1,12 +1,12 @@
 export default function TrustedBrands() {
   return (
-    <div className="w-full h-[100px] sm:h-[130px] md:h-[150px] lg:h-[160px] bg-[#F8F5EF] relative overflow-hidden flex items-center justify-center">
+    <div className="relative flex h-[100px] w-full items-center justify-center overflow-hidden bg-[#F8F5EF] sm:h-[130px] md:h-[150px] lg:h-[160px]">
       {/* Mobile Image */}
       <img
         src="/images/trusted-brands-desktop.png"
         alt=""
         aria-hidden="true"
-        className="absolute w-[160%] max-w-none sm:hidden"
+        className="absolute w-[160%] max-w-none mix-blend-multiply sm:hidden"
         style={{ top: "50%", left: "50%", transform: "translate(-50%, -50%)" }}
       />
       
@@ -15,7 +15,7 @@ export default function TrustedBrands() {
         src="/images/trusted-brands-desktop.png"
         alt="Brands we trust"
         aria-hidden="true"
-        className="hidden sm:block absolute w-full max-w-[1920px]"
+        className="absolute hidden w-full max-w-[1024px] mix-blend-multiply sm:block"
         style={{ top: "50%", left: "50%", transform: "translate(-50%, -50%)" }}
       />
 

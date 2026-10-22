@@ -1,6 +1,6 @@
 import { Link, Navigate, useParams } from "react-router-dom";
 import { getMaterialBySlug, materials } from "@/data/materials";
-import { materialImages } from "@/data/images";
+import { catalogMaterialImages } from "@/data/images";
 
 export default function MaterialPage() {
   const { slug } = useParams();
@@ -27,7 +27,7 @@ export default function MaterialPage() {
             <Link to="/contact" className="mt-8 inline-flex h-12 items-center rounded bg-[#073F3A] px-6 text-xs font-medium uppercase tracking-[0.15em] text-white transition hover:bg-[#0B554E]">Discuss this finish <span aria-hidden="true" className="ml-3">→</span></Link>
           </div>
           <div className="order-1 aspect-[4/3] overflow-hidden rounded-xl bg-[#E9E1D3] lg:order-2">
-            <img src={materialImages[material.slug] || "/images/brochure/laminate-swatch.jpg"} alt={`${material.name} finish sample`} className="h-full w-full object-cover" />
+            <img src={catalogMaterialImages[material.slug] || "/images/brochure/laminate-swatch.jpg"} alt={`${material.name} finish`} className="h-full w-full object-cover" />
           </div>
         </div>
       </section>

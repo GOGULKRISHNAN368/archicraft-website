@@ -98,14 +98,16 @@ export default function HomePage() {
 
       <HomeMaterials />
 
-      <section className="w-full flex">
+      <section className="w-full bg-[#F8F5EF]">
         <TrustedBrands />
       </section>
 
-      <section className="max-w-content mx-auto px-4 sm:px-6 lg:px-10 pt-8 pb-10 sm:pt-12 sm:pb-24">
-        <SectionHeading title="What clients say about working with us" />
-        <div className="mt-10 sm:mt-12">
-          <Testimonials />
+      <section className="bg-[#F8F5EF] px-4 pb-10 pt-8 sm:px-6 sm:pb-24 sm:pt-12 lg:px-10">
+        <div className="mx-auto max-w-content">
+          <SectionHeading title="What clients say about working with us" />
+          <div className="mt-10 sm:mt-12">
+            <Testimonials />
+          </div>
         </div>
       </section>
 

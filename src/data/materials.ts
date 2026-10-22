@@ -9,7 +9,7 @@ export type Material = {
   applications: string;
 };
 
-export const materials: Material[] = [
+export const homeMaterials: Material[] = [
   {
     slug: "pu-finish",
     name: "PU Finish",
@@ -75,6 +75,50 @@ export const materials: Material[] = [
     advantages: "Trusted brand performance and warranty support across every category.",
     maintenance: "Varies by product; guidance provided per brand at material selection.",
     applications: "Used across all services as the supporting hardware and surface layer.",
+  },
+];
+
+export const materials: Material[] = [
+  ...homeMaterials,
+  {
+    slug: "wood-veneer",
+    name: "Wood Veneer",
+    seoTitle: "Natural Wood Veneer Finishes for Interiors | Archicraft Interiors",
+    description: "A natural timber surface with distinctive grain and warmth.",
+    metaDescription: "Explore natural wood veneer for cabinetry, wall panels, and furniture with Archicraft Interiors.",
+    advantages: "Natural grain variation brings depth and warmth to cabinetry and wall details.",
+    maintenance: "Dust regularly and clean with a soft, lightly damp cloth; avoid prolonged moisture.",
+    applications: "Wardrobes, feature panels, cabinetry, and custom furniture.",
+  },
+  {
+    slug: "quartz-surfaces",
+    name: "Quartz Surfaces",
+    seoTitle: "Quartz Surfaces for Kitchens & Interiors | Archicraft Interiors",
+    description: "A refined engineered surface for hardworking counters and vanities.",
+    metaDescription: "Discover quartz surfaces for kitchen counters and bathroom vanities with Archicraft Interiors.",
+    advantages: "Consistent patterns and a durable surface make quartz a practical choice for counters.",
+    maintenance: "Wipe with a soft cloth and mild cleaner; use trivets and follow the supplier's care guidance.",
+    applications: "Kitchen counters, islands, utility areas, and bathroom vanities.",
+  },
+  {
+    slug: "glass-and-mirrors",
+    name: "Glass & Mirrors",
+    seoTitle: "Glass & Mirror Interior Finishes | Archicraft Interiors",
+    description: "Light-reflecting details that add openness and a clean, modern finish.",
+    metaDescription: "Explore glass and mirror applications for partitions, display units, and interior details.",
+    advantages: "Glass and mirrors can brighten a room and add visual openness when placed thoughtfully.",
+    maintenance: "Clean with a non-abrasive glass cleaner and a lint-free cloth.",
+    applications: "Partitions, wardrobe shutters, display cabinets, and backsplashes.",
+  },
+  {
+    slug: "solid-surface",
+    name: "Solid Surface",
+    seoTitle: "Solid Surface Countertops & Interiors | Archicraft Interiors",
+    description: "A smooth, seamless-looking surface for contemporary counters and vanities.",
+    metaDescription: "Consider solid surface materials for counters, vanities, and integrated interior details.",
+    advantages: "Can be shaped for integrated details and visually continuous joins, depending on the product.",
+    maintenance: "Clean with mild soap and water; follow the manufacturer's care and repair instructions.",
+    applications: "Kitchen counters, reception desks, bathroom vanities, and integrated wash areas.",
   },
 ];
 
