@@ -1,43 +1,34 @@
 import { Link } from "react-router-dom";
 import type { Material } from "@/data/materials";
-import { materialImages, heroFallbackImage } from "@/data/images";
+import { catalogMaterialImages, heroFallbackImage } from "@/data/images";
 
-export default function MaterialCard({ material, index }: { material: Material, index?: number }) {
+export default function MaterialCard({ material, index }: { material: Material; index?: number }) {
   return (
     <Link
       to={`/materials/${material.slug}`}
-      className="group flex flex-col items-start block"
+      className="group relative block aspect-[4/5] overflow-hidden rounded-2xl bg-[#D8D2C7] transition duration-300 hover:-translate-y-1 hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#B9965A]"
     >
-      <div className="w-full aspect-[4/3] rounded-[4px] overflow-hidden mb-5 sm:mb-6 bg-[#E9E1D3] border border-black/80">
+      <div className="absolute inset-0 overflow-hidden">
         <img
-          src={materialImages[material.slug] || heroFallbackImage}
-          alt={`${material.name} interior finish`}
-          className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.02]"
+          src={catalogMaterialImages[material.slug] || heroFallbackImage}
+          alt=""
+          loading="lazy"
+          decoding="async"
+          sizes="(min-width: 1024px) 25vw, (min-width: 640px) 36vw, 68vw"
+          className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
         />
+        <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-black/5" />
       </div>
-      
-      <div className="flex items-baseline gap-3 mb-2 w-full">
-        {index !== undefined && (
-          <span className="text-[#C8A45D] text-xs font-semibold tracking-widest shrink-0">
-            {String(index).padStart(2, '0')}
-          </span>
-        )}
-        <h3 className="font-display text-[#073F3A] text-xl sm:text-2xl font-medium">
-          {material.name}
-        </h3>
-      </div>
-      
-      <p className="text-[#6F8580] text-[14px] leading-relaxed mb-4 max-w-sm">
-        {material.description}
-      </p>
-      
-      <div className="mt-auto flex items-center text-[#073F3A] font-medium text-sm transition-colors group-hover:text-[#C8A45D]">
-        <span className="relative">
-          Explore
-          <span className="absolute left-0 -bottom-1 w-0 group-hover:w-full h-[1px] bg-[#C8A45D] transition-all duration-300"></span>
+      {index !== undefined && (
+        <span className="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1.5 text-[9px] font-semibold tracking-[0.18em] text-[#073F3A] sm:left-5 sm:top-5">
+          {String(index).padStart(2, "0")}
         </span>
-        <span className="ml-2 transform group-hover:translate-x-1 transition-transform duration-300">
-          →
+      )}
+      <div className="absolute inset-x-0 bottom-0 p-4 text-white sm:p-5">
+        <h3 className="font-display text-xl font-medium leading-tight sm:text-2xl">{material.name}</h3>
+        <p className="mt-2 line-clamp-2 text-xs leading-relaxed text-white/80 sm:text-sm">{material.description}</p>
+        <span className="mt-4 inline-flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-white sm:mt-5">
+          Explore finish <span aria-hidden="true" className="transition-transform group-hover:translate-x-1">&rarr;</span>
         </span>
       </div>
     </Link>

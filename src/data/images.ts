@@ -61,6 +61,29 @@ export const materialImages: Record<string, string> = {
   "premium-surfaces": "https://images.unsplash.com/photo-1625434998283-460380a78288?fm=jpg&q=75&w=800&auto=format&fit=crop",
 };
 
+// High-resolution editorial photos for the compact home page materials carousel.
+export const homeMaterialImages: Record<string, string> = {
+  "pu-finish": "https://images.unsplash.com/photo-1751290741395-8fd9bc214f61?auto=format&fit=crop&w=1400&q=85",
+  laminate: "https://images.unsplash.com/photo-1607582544956-a874e6740135?auto=format&fit=crop&w=1400&q=85",
+  membrane: "https://images.unsplash.com/photo-1610276173132-c47d148ab626?auto=format&fit=crop&w=1400&q=85",
+  acrylic: "https://images.unsplash.com/photo-1628745277866-0c4468030a81?auto=format&fit=crop&w=1400&q=85",
+  "lacquer-finish": "https://images.unsplash.com/photo-1769745918779-f255f567664c?auto=format&fit=crop&w=1400&q=85",
+  "premium-surfaces": "https://images.unsplash.com/photo-1754415266974-404a215e6c62?auto=format&fit=crop&w=1400&q=85",
+};
+
+const catalogOnlyMaterialImages: Record<string, string> = {
+  "wood-veneer": "https://images.unsplash.com/photo-1607582544956-a874e6740135?auto=format&fit=crop&w=1400&q=85",
+  "quartz-surfaces": "https://images.unsplash.com/photo-1771795638652-01821921a461?auto=format&fit=crop&w=1400&q=85",
+  "glass-and-mirrors": "https://images.unsplash.com/photo-1765766600457-abfd14dd502c?auto=format&fit=crop&w=1400&q=85",
+  "solid-surface": "https://images.unsplash.com/photo-1668642244016-bcc611e3139f?auto=format&fit=crop&w=1400&q=85",
+};
+
+export const catalogMaterialImages: Record<string, string> = {
+  ...materialImages,
+  ...homeMaterialImages,
+  ...catalogOnlyMaterialImages,
+};
+
 export const blogImages: Record<string, string> = {
   "pu-finish-vs-laminate-modular-kitchen": "/images/brochure/pu-finish-swatch.jpg",
   "kids-bedroom-design-that-grows-with-them": "/images/brochure/bedroom-design-hero.jpg",

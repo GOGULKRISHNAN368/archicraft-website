@@ -34,7 +34,7 @@ export default function HomePage() {
 
       <StatsBar />
 
-      <section className="max-w-content mx-auto px-4 sm:px-6 lg:px-10 py-10 sm:py-24">
+      <section id="services" className="max-w-content mx-auto px-4 sm:px-6 lg:px-10 py-10 sm:py-24">
         <SectionHeading
           eyebrow="What We Design"
           title="One studio, every space that matters"
@@ -48,7 +48,7 @@ export default function HomePage() {
           ))}
         </div>
         <div className="text-center mt-8">
-          <Button to="/services" variant="secondary">View All Services</Button>
+          <Button to="/contact" variant="secondary">Discuss Your Project</Button>
         </div>
       </section>
 
@@ -98,14 +98,16 @@ export default function HomePage() {
 
       <HomeMaterials />
 
-      <section className="w-full flex">
+      <section className="w-full bg-[#F8F5EF]">
         <TrustedBrands />
       </section>
 
-      <section className="max-w-content mx-auto px-4 sm:px-6 lg:px-10 pt-8 pb-10 sm:pt-12 sm:pb-24">
-        <SectionHeading title="What clients say about working with us" />
-        <div className="mt-10 sm:mt-12">
-          <Testimonials />
+      <section className="bg-[#F8F5EF] px-4 pb-10 pt-8 sm:px-6 sm:pb-24 sm:pt-12 lg:px-10">
+        <div className="mx-auto max-w-content">
+          <SectionHeading title="What clients say about working with us" />
+          <div className="mt-10 sm:mt-12">
+            <Testimonials />
+          </div>
         </div>
       </section>
 
@@ -130,11 +132,11 @@ export default function HomePage() {
                 </span>
               </div>
               
-              <h2 className="font-display text-[#073F3A] text-[42px] sm:text-[48px] lg:text-[66px] leading-[1.0] font-semibold mb-6 max-w-[320px] md:max-w-none">
+              <h2 className="font-display text-[#073F3A] text-[36px] sm:text-[42px] lg:text-[52px] leading-[1.05] font-semibold mb-5 max-w-[320px] md:max-w-none">
                 Questions,<br />answered
               </h2>
               
-              <p className="text-[#6F7C78] text-[16px] lg:text-[19px] leading-[1.6] max-w-[320px] mb-8 md:mb-0">
+              <p className="text-[#6F7C78] text-[15px] lg:text-base leading-relaxed max-w-[320px] mb-8 md:mb-0">
                 Everything you need to know before we begin designing your space.
               </p>
             </div>

@@ -1,101 +1,84 @@
+import { useRef } from "react";
 import { Link } from "react-router-dom";
-import { materials } from "@/data/materials";
-import { materialImages } from "@/data/images";
+import { homeMaterials } from "@/data/materials";
+import { homeMaterialImages, materialImages } from "@/data/images";
+
+function Arrow({ direction = "right" }: { direction?: "left" | "right" }) {
+  return (
+    <svg aria-hidden="true" viewBox="0 0 20 20" fill="none" className="h-4 w-4" stroke="currentColor" strokeWidth="1.5">
+      {direction === "left" ? <path d="M16 10H4m6 6-6-6 6-6" strokeLinecap="round" strokeLinejoin="round" /> : <path d="M4 10h12m-6-6 6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />}
+    </svg>
+  );
+}
 
 export default function HomeMaterials() {
+  const carouselRef = useRef<HTMLDivElement>(null);
+
+  const moveCarousel = (direction: number) => {
+    const carousel = carouselRef.current;
+    if (!carousel) return;
+    const card = carousel.querySelector<HTMLElement>("[data-material-card]");
+    const gap = Number.parseFloat(getComputedStyle(carousel).columnGap) || 16;
+    carousel.scrollBy({ left: direction * ((card?.offsetWidth ?? 280) + gap), behavior: "smooth" });
+  };
+
   return (
-    <section className="relative w-full bg-[#F8F5EF] pt-12 sm:pt-16 overflow-hidden font-sans">
-      {/* Decorative side text (Hidden on mobile) */}
-      <div className="hidden lg:block absolute left-4 top-24 text-[#55716C]/40 text-[10px] tracking-[0.25em] uppercase rotate-[-90deg] origin-left">
-        Spaces that feel like you
-      </div>
-
-      {/* Decorative vertical lines */}
-      <div className="hidden lg:block absolute left-8 top-0 bottom-0 w-px bg-[#B9965A]/20"></div>
-      <div className="hidden lg:block absolute right-8 top-0 bottom-0 w-px bg-[#B9965A]/20"></div>
-
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 relative z-10 pb-8 sm:pb-10">
-        
-        {/* Header Area */}
-        <div className="flex flex-col items-center text-center max-w-[700px] mx-auto mb-10 sm:mb-12">
-          <div className="flex items-center gap-3 mb-4">
-            <div className="w-6 sm:w-8 h-px bg-[#B9965A]"></div>
-            <span className="text-[#B9965A] text-[9px] sm:text-[10px] font-semibold tracking-[0.25em] uppercase">
-              Our Materials
-            </span>
-            <div className="w-6 sm:w-8 h-px bg-[#B9965A]"></div>
+    <section className="overflow-hidden bg-[#F8F5EF] py-12 sm:py-16 lg:py-20">
+      <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-10">
+        <div className="mb-6 flex items-end justify-between gap-4 sm:mb-8">
+          <div className="max-w-2xl">
+            <div className="mb-3 flex items-center gap-3">
+              <span className="h-px w-8 bg-[#B9965A]" />
+              <span className="text-[10px] font-semibold uppercase tracking-[0.25em] text-[#B9965A]">Our Materials</span>
+            </div>
+            <h2 className="font-display text-[26px] font-medium leading-tight text-[#073F3A] sm:text-[32px] lg:text-[38px]">
+              Luxury begins with the right material
+            </h2>
+            <p className="mt-3 max-w-[650px] text-sm leading-relaxed text-[#55716C] sm:mt-4 sm:text-base">
+              A closer look at the finishes that bring character to every space.
+            </p>
           </div>
-          
-          <h2 className="font-display text-[#073F3A] text-3xl sm:text-4xl lg:text-[44px] leading-tight font-medium mb-4">
-            Luxury begins with the right material
-          </h2>
-          
-          <p className="text-[#55716C] text-base sm:text-lg leading-relaxed max-w-[650px]">
-            We work in PU finish, laminate, membrane, acrylic, and lacquer finish — each chosen for how it will actually perform in your home.
-          </p>
+          <div className="hidden shrink-0 items-center gap-3 sm:flex">
+            <Link to="/materials" className="mr-2 text-xs font-semibold uppercase tracking-[0.14em] text-[#073F3A] transition hover:text-[#B9965A]">View all</Link>
+            <button type="button" onClick={() => moveCarousel(-1)} aria-label="Show previous materials" className="flex h-10 w-10 items-center justify-center rounded-full border border-[#073F3A]/20 text-[#073F3A] transition hover:bg-[#073F3A] hover:text-white"><Arrow direction="left" /></button>
+            <button type="button" onClick={() => moveCarousel(1)} aria-label="Show next materials" className="flex h-10 w-10 items-center justify-center rounded-full border border-[#073F3A]/20 text-[#073F3A] transition hover:bg-[#073F3A] hover:text-white"><Arrow /></button>
+          </div>
         </div>
 
-        {/* Material Cards */}
-        <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:gap-6">
-          {materials.map((m, idx) => (
+        <div ref={carouselRef} role="region" aria-label="Featured materials" className="-mx-4 flex snap-x snap-mandatory gap-3 overflow-x-auto px-4 pb-3 scroll-smooth sm:mx-0 sm:gap-4 sm:px-0 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          {homeMaterials.map((material, index) => (
             <Link
-              to={`/materials/${m.slug}`}
-              key={m.slug}
-              className="group flex h-full flex-col bg-[#FFFDF9] border border-[#E4DED3] rounded-xl overflow-hidden shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-400 ease-out"
+              data-material-card
+              to={`/materials/${material.slug}`}
+              key={material.slug}
+              className="group relative block aspect-[4/5] w-[62%] max-w-[250px] shrink-0 snap-start overflow-hidden rounded-2xl bg-[#D8D2C7] sm:w-[36%] sm:max-w-[290px] lg:w-[calc((100%-3rem)/4)] lg:max-w-[310px]"
             >
-              {/* Image Section */}
-              <div className="h-[160px] sm:h-[180px] lg:h-[190px] w-full overflow-hidden rounded-t-xl relative">
-                <img
-                  src={materialImages[m.slug] || "/images/brochure/laminate-swatch.jpg"}
-                  alt={m.name}
-                  className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
-                />
-              </div>
-
-              {/* Content Section */}
-              <div className="p-4 sm:p-5 flex flex-col flex-grow">
-                <div className="flex items-center gap-2 mb-3">
-                  <span className="text-[#B9965A] font-sans text-xs font-medium tracking-wider">
-                    0{idx + 1}
-                  </span>
-                  <div className="w-3 h-px bg-[#B9965A]"></div>
-                </div>
-
-                <h3 className="font-display text-[#073F3A] text-lg sm:text-xl font-semibold mb-2 leading-snug">
-                  {m.name}
-                </h3>
-                
-                <p className="text-[#71807B] text-[13px] sm:text-[14px] leading-[1.4] mb-6 flex-grow">
-                  {m.description}
-                </p>
-
-                <div className="mt-auto flex items-center text-[#073F3A] font-display font-medium text-[15px] group-hover:text-[#B9965A] transition-colors">
-                  <span className="relative">
-                    View details
-                    <span className="absolute left-0 -bottom-1 w-full h-[1px] bg-[#B9965A]/30 group-hover:bg-[#B9965A] transition-colors"></span>
-                  </span>
-                  <span className="ml-1.5 transform group-hover:translate-x-1 transition-transform duration-300">
-                    →
-                  </span>
-                </div>
+              <img
+                src={homeMaterialImages[material.slug] || materialImages[material.slug]}
+                alt={`${material.name} interior finish`}
+                loading={index < 2 ? "eager" : "lazy"}
+                decoding="async"
+                sizes="(min-width: 1024px) 24vw, (min-width: 640px) 36vw, 62vw"
+                className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+              />
+              <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-black/5 transition-opacity group-hover:from-black/80" />
+              <span className="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1.5 text-[9px] font-semibold tracking-[0.18em] text-[#073F3A] sm:left-5 sm:top-5">{String(index + 1).padStart(2, "0")}</span>
+              <div className="absolute inset-x-0 bottom-0 p-4 text-white sm:p-5">
+                <h3 className="font-display text-xl font-medium leading-tight sm:text-2xl">{material.name}</h3>
+                <p className="mt-2 line-clamp-2 text-xs leading-relaxed text-white/80 sm:text-sm">{material.description}</p>
+                <span className="mt-4 inline-flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-white sm:mt-5">Explore finish <Arrow /></span>
               </div>
             </Link>
           ))}
         </div>
 
-        {/* CTA Button */}
-        <div className="mt-12 sm:mt-16 text-center">
-          <Link
-            to="/materials"
-            className="inline-flex items-center justify-center w-full sm:w-[260px] h-[50px] border border-[#073F3A] rounded-[5px] text-[#073F3A] font-sans font-medium uppercase tracking-widest text-[12px] hover:bg-[#073F3A] hover:text-[#FFFDF9] transition-all duration-300 group"
-          >
-            Explore all materials
-            <span className="ml-2 transform group-hover:translate-x-1 transition-transform duration-300">
-              →
-            </span>
-          </Link>
+        <div className="mt-3 flex items-center justify-between sm:hidden">
+          <span className="text-xs text-[#71807B]">Swipe to explore</span>
+          <div className="flex gap-2">
+            <button type="button" onClick={() => moveCarousel(-1)} aria-label="Show previous materials" className="flex h-10 w-10 items-center justify-center rounded-full border border-[#073F3A]/20 text-[#073F3A]"><Arrow direction="left" /></button>
+            <button type="button" onClick={() => moveCarousel(1)} aria-label="Show next materials" className="flex h-10 w-10 items-center justify-center rounded-full border border-[#073F3A]/20 text-[#073F3A]"><Arrow /></button>
+          </div>
         </div>
-
       </div>
     </section>
   );

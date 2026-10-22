@@ -22,7 +22,7 @@ export default function Footer() {
   return (
     <>
       {/* 1. CTA / CONSULTATION HERO */}
-      <section className="relative w-full min-h-[520px] lg:h-[580px] bg-[#073F3A] overflow-hidden flex flex-col justify-center items-center">
+      <section className="relative w-full min-h-[420px] lg:h-[460px] bg-[#073F3A] overflow-hidden flex flex-col justify-center items-center">
         {/* Background Image - Assumed path */}
         <div 
           className="absolute inset-0 z-0 bg-[url('/images/cta-bg.png')] bg-cover bg-center bg-no-repeat"
@@ -41,26 +41,26 @@ export default function Footer() {
         </div>
 
         {/* CTA Content */}
-        <div className="relative z-10 flex flex-col items-center text-center px-4 w-full max-w-[950px] mx-auto py-16">
-          <div className="flex items-center gap-4 mb-6">
+        <div className="relative z-10 flex flex-col items-center text-center px-4 w-full max-w-[820px] mx-auto py-12">
+          <div className="flex items-center gap-3 mb-5">
             <div className="w-8 sm:w-12 h-px bg-[#C9A45C]"></div>
-            <span className="text-[#C9A45C] text-[12px] sm:text-[13px] font-medium tracking-[4px] uppercase">
+            <span className="text-[#C9A45C] text-[10px] sm:text-[11px] font-medium tracking-[0.22em] uppercase">
               Let's work together
             </span>
             <div className="w-8 sm:w-12 h-px bg-[#C9A45C]"></div>
           </div>
           
-          <h2 className="font-display text-[#F7F3EA] text-[30px] sm:text-[44px] lg:text-[56px] leading-[1.05] font-semibold mb-6">
+          <h2 className="font-display text-[#F7F3EA] text-[28px] sm:text-[36px] lg:text-[44px] leading-[1.12] font-semibold mb-4">
             Let’s create something<br className="hidden sm:block"/> extraordinary, together
           </h2>
           
-          <p className="text-[#D8DED8] text-[16px] sm:text-[18px] lg:text-[20px] max-w-[600px] mb-10">
+          <p className="text-[#D8DED8] text-[14px] sm:text-[15px] lg:text-base leading-relaxed max-w-[520px] mb-7">
             Designing spaces you’ll love for years to come.
           </p>
 
           <Link
             to="/contact"
-            className="group inline-flex items-center justify-center w-[90%] max-w-[280px] h-[58px] sm:h-[62px] bg-[#C9A45C] hover:bg-[#D4AF6A] text-[#073F3A] font-sans font-semibold text-[15px] sm:text-[16px] tracking-[0.5px] uppercase rounded-[5px] shadow-sm hover:shadow-md hover:-translate-y-[3px] transition-all duration-300"
+            className="group inline-flex items-center justify-center w-auto min-h-[48px] bg-[#C9A45C] hover:bg-[#D4AF6A] px-6 text-[#073F3A] font-sans font-semibold text-[12px] tracking-[0.12em] uppercase rounded-[5px] shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
           >
             Book a Consultation
             <span className="ml-3 transform group-hover:translate-x-[5px] transition-transform duration-300">
@@ -115,7 +115,7 @@ export default function Footer() {
               <ul className="flex flex-col space-y-2 sm:space-y-4">
                 {footerServiceLinks.map((l) => (
                   <li key={l.href}>
-                    <Link to={l.href} className="inline-block py-0.5 sm:py-0 text-[#F7F3EA] text-[14px] sm:text-[16px] transition-all duration-250 hover:text-[#C9A45C] hover:translate-x-[3px]">
+                    <Link to={l.href} className="inline-block py-0.5 sm:py-0 text-[#F7F3EA] text-[13px] sm:text-[14px] transition-all duration-250 hover:text-[#C9A45C] hover:translate-x-[3px]">
                       {l.label}
                     </Link>
                   </li>
@@ -129,7 +129,7 @@ export default function Footer() {
               <ul className="flex flex-col space-y-2 sm:space-y-4">
                 {footerCompanyLinks.map((l) => (
                   <li key={l.href}>
-                    <Link to={l.href} className="inline-block py-0.5 sm:py-0 text-[#F7F3EA] text-[14px] sm:text-[16px] transition-all duration-250 hover:text-[#C9A45C] hover:translate-x-[3px]">
+                    <Link to={l.href} className="inline-block py-0.5 sm:py-0 text-[#F7F3EA] text-[13px] sm:text-[14px] transition-all duration-250 hover:text-[#C9A45C] hover:translate-x-[3px]">
                       {l.label}
                     </Link>
                   </li>
@@ -142,22 +142,22 @@ export default function Footer() {
               <p className="text-[#C9A45C] text-[12px] sm:text-[13px] font-semibold tracking-[2px] sm:tracking-[2.5px] uppercase mb-3 sm:mb-6">Contact</p>
               <ul className="flex flex-col space-y-2 sm:space-y-4 mb-4 sm:mb-8">
                 <li>
-                  <a href={site.phoneHref} className="inline-block py-0.5 sm:py-0 text-[#F7F3EA] text-[14px] sm:text-[16px] transition-all duration-250 hover:text-[#C9A45C] hover:translate-x-[3px]">
+                  <a href={site.phoneHref} className="inline-block py-0.5 sm:py-0 text-[#F7F3EA] text-[13px] sm:text-[14px] transition-all duration-250 hover:text-[#C9A45C] hover:translate-x-[3px]">
                     {site.phone}
                   </a>
                 </li>
                 <li>
-                  <a href={`mailto:${site.email}`} className="inline-block py-0.5 sm:py-0 text-[#F7F3EA] text-[14px] sm:text-[16px] transition-all duration-250 hover:text-[#C9A45C] hover:translate-x-[3px]">
+                  <a href={`mailto:${site.email}`} className="inline-block py-0.5 sm:py-0 text-[#F7F3EA] text-[13px] sm:text-[14px] transition-all duration-250 hover:text-[#C9A45C] hover:translate-x-[3px]">
                     {site.email}
                   </a>
                 </li>
-                <li className="text-[#F7F3EA] text-[14px] sm:text-[16px]">
+                <li className="text-[#F7F3EA] text-[13px] sm:text-[14px]">
                   {site.city}, Tamil Nadu
                 </li>
               </ul>
               <Link 
                 to="/contact" 
-                className="inline-block border border-[#C9A45C] text-[#C9A45C] hover:bg-[#C9A45C] hover:text-[#073F3A] font-semibold text-[13px] tracking-[1.5px] uppercase px-6 py-3 rounded transition-colors duration-300"
+                className="inline-block border border-[#C9A45C] text-[#C9A45C] hover:bg-[#C9A45C] hover:text-[#073F3A] font-semibold text-[11px] tracking-[0.12em] uppercase px-5 py-2.5 rounded transition-colors duration-300"
               >
                 Book a Consultation
               </Link>

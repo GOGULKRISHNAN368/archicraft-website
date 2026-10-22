@@ -19,7 +19,6 @@ import MaterialDetails from './pages/materials/[slug]/page';
 import Portfolio from './pages/portfolio/page';
 import PortfolioProject from './pages/portfolio/[slug]/page';
 import PrivacyPolicy from './pages/privacy-policy/page';
-import Services from './pages/services/page';
 import ServiceDetails from './pages/services/[slug]/page';
 import TermsConditions from './pages/terms-conditions/page';
 import WhyChooseUs from './pages/why-choose-us/page';
@@ -53,7 +52,6 @@ function App() {
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/portfolio/:slug" element={<PortfolioProject />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-            <Route path="/services" element={<Services />} />
             <Route path="/services/:slug" element={<ServiceDetails />} />
             <Route path="/terms-conditions" element={<TermsConditions />} />
             <Route path="/why-choose-us" element={<WhyChooseUs />} />

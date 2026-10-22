@@ -2,7 +2,6 @@
 import Hero from "@/components/Hero";
 import SectionHeading from "@/components/SectionHeading";
 import WhyChooseUs from "@/components/WhyChooseUs";
-import Button from "@/components/Button";
 import RevealOnScroll from "@/components/RevealOnScroll";
 import { aboutImage } from "@/data/images";
 
@@ -90,9 +89,6 @@ export default function AboutPage() {
           <p className="font-accent italic text-2xl sm:text-3xl text-warmwhite max-w-2xl mx-auto">
             &ldquo;Creating interiors that stand the test of time — designed with passion, built with precision.&rdquo;
           </p>
-          <div className="mt-8">
-            <Button to="/contact">Book a Consultation</Button>
-          </div>
         </div>
       </section>
     </>
